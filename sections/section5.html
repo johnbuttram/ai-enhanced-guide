@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI-Enhanced Gaming Guide</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Enhanced Gaming Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     // Load theme
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('theme');
@@ -27,126 +28,117 @@
   </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
-
-  <!-- Sidebar -->
-  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="hover:underline">🏠 Home</a>
-<a href="section1.html" class="hover:underline">Section 1</a>
-<a href="section2.html" class="hover:underline">Section 2</a>
-<a href="section3.html" class="hover:underline">Section 3</a>
-<a href="section4.html" class="hover:underline">Section 4</a>
-<a href="section5.html" class="hover:underline">Section 5</a>
-<a href="section6.html" class="hover:underline">Section 6</a>
-<a href="section7.html" class="hover:underline">Section 7</a>
-<a href="section8.html" class="hover:underline">Section 8</a>
-<a href="section9.html" class="hover:underline">Section 9</a>
-<a href="section10.html" class="hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </aside>
-
-  <!-- Mobile sidebar toggle -->
-  <div class="md:hidden fixed top-4 left-4 z-50">
-    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
-  </div>
-  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
-    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
-<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
-<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
-<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
-<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
-<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
-<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
-<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
-<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
-<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
-<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </div>
-
-  <!-- Main Content -->
-  <main class="flex-1 p-6">
-    
-<section id="section5" class="max-w-4xl mx-auto">
-  <h2 class="text-2xl font-bold mb-4">🌟 Section 5: Visual Settings for Stunning Graphics Without Sacrificing Performance</h2>
-  <p class="mb-6">Want gorgeous visuals <em>and</em> smooth gameplay? It’s not just possible — it’s doable on almost any rig. This section breaks down which settings actually matter, what to lower, and what to leave cranked up.</p>
-
-  <h3 class="text-xl font-semibold mb-2">🎛️ What to Tweak (and Why)</h3>
-  <div class="overflow-x-auto mb-6">
-    <table class="w-full table-auto border border-gray-300 text-sm">
-      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
-        <tr>
-          <th class="border px-4 py-2">Setting</th>
-          <th class="border px-4 py-2">Performance Hit</th>
-          <th class="border px-4 py-2">What to Do</th>
-        </tr>
-      </thead>
-      <tbody class="dark:bg-gray-800 dark:text-gray-100">
-        <tr>
-          <td class="border px-4 py-2">Shadows</td>
-          <td class="border px-4 py-2">High</td>
-          <td class="border px-4 py-2">Drop to Medium or Low. Massive FPS boost, barely noticeable downgrade.</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Texture Quality</td>
-          <td class="border px-4 py-2">Medium</td>
-          <td class="border px-4 py-2">Match your VRAM: 4GB = Medium, 6–8GB = High, 12GB+ = Ultra.</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Post-Processing</td>
-          <td class="border px-4 py-2">High</td>
-          <td class="border px-4 py-2">Turn off motion blur, film grain, depth of field — they're fake flair.</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Ray Tracing</td>
-          <td class="border px-4 py-2">Extreme</td>
-          <td class="border px-4 py-2">Only turn this on if you have RTX 3070+ or RX 6800 XT+. Otherwise, skip.</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Ambient Occlusion</td>
-          <td class="border px-4 py-2">High</td>
-          <td class="border px-4 py-2">Use SSAO or off. Skip ray-traced AO unless you have performance to burn.</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Resolution Scaling</td>
-          <td class="border px-4 py-2">Varies</td>
-          <td class="border px-4 py-2">Use DLSS, FSR, or dynamic scaling to boost FPS without hurting clarity.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 class="text-xl font-semibold mb-2">🎯 Strategy: Layer Smart, Don’t Guess</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li>Start on Medium or High — not Ultra</li>
-    <li>Bump up <strong>textures</strong>, maybe <strong>draw distance</strong></li>
-    <li>Drop <strong>shadows</strong>, <strong>volumetrics</strong>, <strong>reflections</strong></li>
-    <li>Use <strong>DLSS / FSR</strong> if available (big win)</li>
-    <li>Benchmark every change (use CapFrameX, Rivatuner, or in-game metrics)</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold mb-2">🧪 Prompt Examples</h3>
-  <div class="space-y-4 mb-4">
-    <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
-      <code id="prompt1" class="block whitespace-pre-wrap">
+<!-- Sidebar -->
+<aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="hover:underline" href="../index.html">🏠 Home</a>
+<a class="hover:underline" href="section1.html">Section 1</a>
+<a class="hover:underline" href="section2.html">Section 2</a>
+<a class="hover:underline" href="section3.html">Section 3</a>
+<a class="hover:underline" href="section4.html">Section 4</a>
+<a class="hover:underline" href="section5.html">Section 5</a>
+<a class="hover:underline" href="section6.html">Section 6</a>
+<a class="hover:underline" href="section7.html">Section 7</a>
+<a class="hover:underline" href="section8.html">Section 8</a>
+<a class="hover:underline" href="section9.html">Section 9</a>
+<a class="hover:underline" href="section10.html">Section 10</a>
+<a class="hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</aside>
+<!-- Mobile sidebar toggle -->
+<div class="md:hidden fixed top-4 left-4 z-50">
+<button class="bg-gray-700 text-white px-3 py-2 rounded" onclick="toggleSidebar()">☰</button>
+</div>
+<div class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden" id="mobileSidebar">
+<button class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300" onclick="toggleSidebar()">✖ Close</button>
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="block mb-2 hover:underline" href="../index.html">🏠 Home</a>
+<a class="block mb-2 hover:underline" href="section1.html">Section 1</a>
+<a class="block mb-2 hover:underline" href="section2.html">Section 2</a>
+<a class="block mb-2 hover:underline" href="section3.html">Section 3</a>
+<a class="block mb-2 hover:underline" href="section4.html">Section 4</a>
+<a class="block mb-2 hover:underline" href="section5.html">Section 5</a>
+<a class="block mb-2 hover:underline" href="section6.html">Section 6</a>
+<a class="block mb-2 hover:underline" href="section7.html">Section 7</a>
+<a class="block mb-2 hover:underline" href="section8.html">Section 8</a>
+<a class="block mb-2 hover:underline" href="section9.html">Section 9</a>
+<a class="block mb-2 hover:underline" href="section10.html">Section 10</a>
+<a class="block mb-2 hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+<!-- Main Content -->
+<main class="flex-1 p-6">
+<section class="max-w-4xl mx-auto" id="section5">
+<h2 class="text-2xl font-bold mb-4">🌟 Section 5: Visual Settings for Stunning Graphics Without Sacrificing Performance</h2>
+<p class="mb-6">Want gorgeous visuals <em>and</em> smooth gameplay? It’s not just possible — it’s doable on almost any rig. This section breaks down which settings actually matter, what to lower, and what to leave cranked up.</p>
+<h3 class="text-xl font-semibold mb-2">🎛️ What to Tweak (and Why)</h3>
+<div class="overflow-x-auto mb-6">
+<table class="w-full table-auto border border-gray-300 text-sm">
+<thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+<tr>
+<th class="border px-4 py-2">Setting</th>
+<th class="border px-4 py-2">Performance Hit</th>
+<th class="border px-4 py-2">What to Do</th>
+</tr>
+</thead>
+<tbody class="dark:bg-gray-800 dark:text-gray-100">
+<tr>
+<td class="border px-4 py-2">Shadows</td>
+<td class="border px-4 py-2">High</td>
+<td class="border px-4 py-2">Drop to Medium or Low. Massive FPS boost, barely noticeable downgrade.</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Texture Quality</td>
+<td class="border px-4 py-2">Medium</td>
+<td class="border px-4 py-2">Match your VRAM: 4GB = Medium, 6–8GB = High, 12GB+ = Ultra.</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Post-Processing</td>
+<td class="border px-4 py-2">High</td>
+<td class="border px-4 py-2">Turn off motion blur, film grain, depth of field — they're fake flair.</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Ray Tracing</td>
+<td class="border px-4 py-2">Extreme</td>
+<td class="border px-4 py-2">Only turn this on if you have RTX 3070+ or RX 6800 XT+. Otherwise, skip.</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Ambient Occlusion</td>
+<td class="border px-4 py-2">High</td>
+<td class="border px-4 py-2">Use SSAO or off. Skip ray-traced AO unless you have performance to burn.</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Resolution Scaling</td>
+<td class="border px-4 py-2">Varies</td>
+<td class="border px-4 py-2">Use DLSS, FSR, or dynamic scaling to boost FPS without hurting clarity.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="text-xl font-semibold mb-2">🎯 Strategy: Layer Smart, Don’t Guess</h3>
+<ul class="list-disc list-inside space-y-2 mb-6">
+<li>Start on Medium or High — not Ultra</li>
+<li>Bump up <strong>textures</strong>, maybe <strong>draw distance</strong></li>
+<li>Drop <strong>shadows</strong>, <strong>volumetrics</strong>, <strong>reflections</strong></li>
+<li>Use <strong>DLSS / FSR</strong> if available (big win)</li>
+<li>Benchmark every change (use CapFrameX, Rivatuner, or in-game metrics)</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2">🧪 Prompt Examples</h3>
+<div class="space-y-4 mb-4">
+<div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
+<code class="block whitespace-pre-wrap" id="prompt1">
 Help me find the best balance of visuals and FPS for Starfield on my RTX 3060 and Ryzen 5 5600X.
       </code>
-      <button onclick="navigator.clipboard.writeText(document.getElementById('prompt1').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
-    </div>
-
-    <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
-      <code id="prompt2" class="block whitespace-pre-wrap">
+<button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded" onclick="navigator.clipboard.writeText(document.getElementById('prompt1').textContent).then(() =&gt; alert('Prompt copied!'));">Copy</button>
+</div>
+<div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
+<code class="block whitespace-pre-wrap" id="prompt2">
 Explain which Witcher 3 settings impact FPS the most and which ones I can safely leave on high.
       </code>
-      <button onclick="navigator.clipboard.writeText(document.getElementById('prompt2').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
-    </div>
-  </div>
+<button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded" onclick="navigator.clipboard.writeText(document.getElementById('prompt2').textContent).then(() =&gt; alert('Prompt copied!'));">Copy</button>
+</div>
+</div>
 </section>
-
-  </main>
+</main>
 </body>
 </html>

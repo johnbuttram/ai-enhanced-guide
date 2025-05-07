@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI-Enhanced Gaming Guide</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Enhanced Gaming Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     // Load theme
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('theme');
@@ -27,113 +28,98 @@
   </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
-
-  <!-- Sidebar -->
-  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="hover:underline">🏠 Home</a>
-<a href="section1.html" class="hover:underline">Section 1</a>
-<a href="section2.html" class="hover:underline">Section 2</a>
-<a href="section3.html" class="hover:underline">Section 3</a>
-<a href="section4.html" class="hover:underline">Section 4</a>
-<a href="section5.html" class="hover:underline">Section 5</a>
-<a href="section6.html" class="hover:underline">Section 6</a>
-<a href="section7.html" class="hover:underline">Section 7</a>
-<a href="section8.html" class="hover:underline">Section 8</a>
-<a href="section9.html" class="hover:underline">Section 9</a>
-<a href="section10.html" class="hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </aside>
-
-  <!-- Mobile sidebar toggle -->
-  <div class="md:hidden fixed top-4 left-4 z-50">
-    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
-  </div>
-  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
-    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
-<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
-<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
-<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
-<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
-<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
-<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
-<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
-<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
-<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
-<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </div>
-
-  <!-- Main Content -->
-  <main class="flex-1 p-6">
-    
-<section id="section9" class="max-w-4xl mx-auto">
-  <h2 class="text-2xl font-bold mb-4">🧰 Section 9: Companion Toolkit Overview</h2>
-  <p class="mb-6">This section highlights the bonus digital tools bundled with your guide — all designed to make optimizing, tracking, and customizing your gaming experience easier.</p>
-
-  <h3 class="text-xl font-semibold mb-2">📂 What’s Included</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li><strong>System Change Tracker</strong> — A log to track hardware changes, software installs, settings edits, and maintenance tasks.</li>
-    <li><strong>FPS Performance Sheet</strong> — Record before/after FPS stats, settings changes, and improvements.</li>
-    <li><strong>Optimization Checklist</strong> — A printable checklist with space for notes, recommended tools, and reminders.</li>
-    <li><strong>Prompt Planner</strong> — A structured doc to help you craft effective ChatGPT prompts and track useful responses.</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold mb-2">🧪 Prompt Example</h3>
-  <div class="relative bg-gray-100 dark:bg-gray-800 text-sm rounded-md p-4 mb-6">
-    <code id="toolkitPrompt" class="block whitespace-pre-wrap">
+<!-- Sidebar -->
+<aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="hover:underline" href="../index.html">🏠 Home</a>
+<a class="hover:underline" href="section1.html">Section 1</a>
+<a class="hover:underline" href="section2.html">Section 2</a>
+<a class="hover:underline" href="section3.html">Section 3</a>
+<a class="hover:underline" href="section4.html">Section 4</a>
+<a class="hover:underline" href="section5.html">Section 5</a>
+<a class="hover:underline" href="section6.html">Section 6</a>
+<a class="hover:underline" href="section7.html">Section 7</a>
+<a class="hover:underline" href="section8.html">Section 8</a>
+<a class="hover:underline" href="section9.html">Section 9</a>
+<a class="hover:underline" href="section10.html">Section 10</a>
+<a class="hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</aside>
+<!-- Mobile sidebar toggle -->
+<div class="md:hidden fixed top-4 left-4 z-50">
+<button class="bg-gray-700 text-white px-3 py-2 rounded" onclick="toggleSidebar()">☰</button>
+</div>
+<div class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden" id="mobileSidebar">
+<button class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300" onclick="toggleSidebar()">✖ Close</button>
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="block mb-2 hover:underline" href="../index.html">🏠 Home</a>
+<a class="block mb-2 hover:underline" href="section1.html">Section 1</a>
+<a class="block mb-2 hover:underline" href="section2.html">Section 2</a>
+<a class="block mb-2 hover:underline" href="section3.html">Section 3</a>
+<a class="block mb-2 hover:underline" href="section4.html">Section 4</a>
+<a class="block mb-2 hover:underline" href="section5.html">Section 5</a>
+<a class="block mb-2 hover:underline" href="section6.html">Section 6</a>
+<a class="block mb-2 hover:underline" href="section7.html">Section 7</a>
+<a class="block mb-2 hover:underline" href="section8.html">Section 8</a>
+<a class="block mb-2 hover:underline" href="section9.html">Section 9</a>
+<a class="block mb-2 hover:underline" href="section10.html">Section 10</a>
+<a class="block mb-2 hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+<!-- Main Content -->
+<main class="flex-1 p-6">
+<section class="max-w-4xl mx-auto" id="section9">
+<h2 class="text-2xl font-bold mb-4">🧰 Section 9: Companion Toolkit Overview</h2>
+<p class="mb-6">This section highlights the bonus digital tools bundled with your guide — all designed to make optimizing, tracking, and customizing your gaming experience easier.</p>
+<h3 class="text-xl font-semibold mb-2">📂 What’s Included</h3>
+<ul class="list-disc list-inside space-y-2 mb-6">
+<li><strong>System Change Tracker</strong> — A log to track hardware changes, software installs, settings edits, and maintenance tasks.</li>
+<li><strong>FPS Performance Sheet</strong> — Record before/after FPS stats, settings changes, and improvements.</li>
+<li><strong>Optimization Checklist</strong> — A printable checklist with space for notes, recommended tools, and reminders.</li>
+<li><strong>Prompt Planner</strong> — A structured doc to help you craft effective ChatGPT prompts and track useful responses.</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2">🧪 Prompt Example</h3>
+<div class="relative bg-gray-100 dark:bg-gray-800 text-sm rounded-md p-4 mb-6">
+<code class="block whitespace-pre-wrap" id="toolkitPrompt">
 I’ve just installed a new GPU and updated my drivers. Help me log and test performance differences using the System Change Tracker and FPS Sheet in the Companion Toolkit.
     </code>
-    <button onclick="navigator.clipboard.writeText(document.getElementById('toolkitPrompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
-  </div>
-
-  <h3 class="text-xl font-semibold mb-2">📝 How to Use the Toolkit</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li><strong>Track changes as you go</strong> — Log even small tweaks so you can reverse mistakes easily.</li>
-    <li><strong>Use the FPS sheet regularly</strong> — Record your game version, drivers, temps, and FPS after each change.</li>
-    <li><strong>Reference past fixes</strong> — A great setup you did once can be replicated — if it’s logged.</li>
-    <li><strong>Craft better prompts</strong> — Write what worked and refine what didn’t.</li>
-  </ul>
-
-  <p class="mb-2"><strong>💡 Pro Tip:</strong> Think of this like your own user manual for your system — the more you log, the less guesswork later.</p>
-
-  <h3 class="text-xl font-semibold mb-2 mt-10">✨ Bonus Tip: Let ChatGPT Help You Use the Toolkit</h3>
-  <p class="mb-4">You don’t have to fill everything out alone. ChatGPT can actually help you update, summarize, and manage your Companion Toolkit files.</p>
-
-  <h4 class="text-lg font-semibold mb-2">🧾 Toolkit Contents Recap</h4>
-  <ul class="list-disc list-inside mb-6 space-y-2">
-    <li><strong>System Change Tracker:</strong> Log hardware, software, and config changes.</li>
-    <li><strong>FPS Log Sheet:</strong> Record game, settings, FPS before/after tweaks.</li>
-    <li><strong>Optimization Checklist:</strong> Follow and update a performance-focused checklist.</li>
-    <li><strong>Prompt Planner:</strong> Keep track of AI prompts that worked well for you.</li>
-  </ul>
-
-  <h4 class="text-lg font-semibold mb-2">⚙️ Upload to ChatGPT & Ask:</h4>
-  <ol class="list-decimal list-inside mb-6 space-y-2">
-    <li>Open ChatGPT and upload one of your toolkit files (PDF, spreadsheet, etc.).</li>
-    <li>Ask ChatGPT to analyze, summarize, or even update the file for you.</li>
-    <li>Use natural language. For example:</li>
-  </ol>
-
-  <div class="space-y-4 mb-6">
-    <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
-      <code id="toolkitExample1" class="block whitespace-pre-wrap">Here’s my FPS tracker sheet. Can you highlight the tweaks that gave me the biggest FPS gains?</code>
-      <button onclick="navigator.clipboard.writeText(document.getElementById('toolkitExample1').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
-    </div>
-    <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
-      <code id="toolkitExample2" class="block whitespace-pre-wrap">I’m uploading my system change tracker. Can you summarize this month’s upgrades and what I forgot to log?</code>
-      <button onclick="navigator.clipboard.writeText(document.getElementById('toolkitExample2').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
-    </div>
-  </div>
-
-  <p class="mb-2"><strong>💡 Pro Tip:</strong> Use the Prompt Planner to document which AI queries helped the most — and reuse them later!</p>
-
+<button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded" onclick="navigator.clipboard.writeText(document.getElementById('toolkitPrompt').textContent).then(() =&gt; alert('Prompt copied!'));">Copy</button>
+</div>
+<h3 class="text-xl font-semibold mb-2">📝 How to Use the Toolkit</h3>
+<ul class="list-disc list-inside space-y-2 mb-6">
+<li><strong>Track changes as you go</strong> — Log even small tweaks so you can reverse mistakes easily.</li>
+<li><strong>Use the FPS sheet regularly</strong> — Record your game version, drivers, temps, and FPS after each change.</li>
+<li><strong>Reference past fixes</strong> — A great setup you did once can be replicated — if it’s logged.</li>
+<li><strong>Craft better prompts</strong> — Write what worked and refine what didn’t.</li>
+</ul>
+<p class="mb-2"><strong>💡 Pro Tip:</strong> Think of this like your own user manual for your system — the more you log, the less guesswork later.</p>
+<h3 class="text-xl font-semibold mb-2 mt-10">✨ Bonus Tip: Let ChatGPT Help You Use the Toolkit</h3>
+<p class="mb-4">You don’t have to fill everything out alone. ChatGPT can actually help you update, summarize, and manage your Companion Toolkit files.</p>
+<h4 class="text-lg font-semibold mb-2">🧾 Toolkit Contents Recap</h4>
+<ul class="list-disc list-inside mb-6 space-y-2">
+<li><strong>System Change Tracker:</strong> Log hardware, software, and config changes.</li>
+<li><strong>FPS Log Sheet:</strong> Record game, settings, FPS before/after tweaks.</li>
+<li><strong>Optimization Checklist:</strong> Follow and update a performance-focused checklist.</li>
+<li><strong>Prompt Planner:</strong> Keep track of AI prompts that worked well for you.</li>
+</ul>
+<h4 class="text-lg font-semibold mb-2">⚙️ Upload to ChatGPT &amp; Ask:</h4>
+<ol class="list-decimal list-inside mb-6 space-y-2">
+<li>Open ChatGPT and upload one of your toolkit files (PDF, spreadsheet, etc.).</li>
+<li>Ask ChatGPT to analyze, summarize, or even update the file for you.</li>
+<li>Use natural language. For example:</li>
+</ol>
+<div class="space-y-4 mb-6">
+<div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
+<code class="block whitespace-pre-wrap" id="toolkitExample1">Here’s my FPS tracker sheet. Can you highlight the tweaks that gave me the biggest FPS gains?</code>
+<button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded" onclick="navigator.clipboard.writeText(document.getElementById('toolkitExample1').textContent).then(() =&gt; alert('Prompt copied!'));">Copy</button>
+</div>
+<div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm">
+<code class="block whitespace-pre-wrap" id="toolkitExample2">I’m uploading my system change tracker. Can you summarize this month’s upgrades and what I forgot to log?</code>
+<button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded" onclick="navigator.clipboard.writeText(document.getElementById('toolkitExample2').textContent).then(() =&gt; alert('Prompt copied!'));">Copy</button>
+</div>
+</div>
+<p class="mb-2"><strong>💡 Pro Tip:</strong> Use the Prompt Planner to document which AI queries helped the most — and reuse them later!</p>
 </section>
-
-  </main>
+</main>
 </body>
 </html>

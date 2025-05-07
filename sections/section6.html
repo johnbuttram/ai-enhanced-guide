@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI-Enhanced Gaming Guide</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Enhanced Gaming Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     // Load theme
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('theme');
@@ -27,112 +28,103 @@
   </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
-
-  <!-- Sidebar -->
-  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="hover:underline">🏠 Home</a>
-<a href="section1.html" class="hover:underline">Section 1</a>
-<a href="section2.html" class="hover:underline">Section 2</a>
-<a href="section3.html" class="hover:underline">Section 3</a>
-<a href="section4.html" class="hover:underline">Section 4</a>
-<a href="section5.html" class="hover:underline">Section 5</a>
-<a href="section6.html" class="hover:underline">Section 6</a>
-<a href="section7.html" class="hover:underline">Section 7</a>
-<a href="section8.html" class="hover:underline">Section 8</a>
-<a href="section9.html" class="hover:underline">Section 9</a>
-<a href="section10.html" class="hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </aside>
-
-  <!-- Mobile sidebar toggle -->
-  <div class="md:hidden fixed top-4 left-4 z-50">
-    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
-  </div>
-  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
-    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
-    <h2 class="text-lg font-bold mb-4">Navigation</h2>
-    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
-<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
-<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
-<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
-<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
-<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
-<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
-<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
-<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
-<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
-<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
-    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
-    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
-  </div>
-
-  <!-- Main Content -->
-  <main class="flex-1 p-6">
-    
-<section id="section6" class="max-w-4xl mx-auto">
-  <h2 class="text-2xl font-bold mb-4">🔧 Section 6: Maintenance & Long-Term Performance Tips</h2>
-  <p class="mb-6">A high-performance PC is like a high-performance car — it runs best when tuned, cleaned, and cared for. This section gives you a simple, effective maintenance routine that’ll keep your rig running fast, cool, and stable for years.</p>
-
-  <h3 class="text-xl font-semibold mb-2">🧽 Your Long-Term Maintenance Routine</h3>
-  <div class="overflow-x-auto mb-6">
-    <table class="w-full table-auto border border-gray-300 text-sm">
-      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
-        <tr>
-          <th class="border px-4 py-2">Task</th>
-          <th class="border px-4 py-2">Frequency</th>
-          <th class="border px-4 py-2">Why It Matters</th>
-        </tr>
-      </thead>
-      <tbody class="dark:bg-gray-800 dark:text-gray-100">
-        <tr>
-          <td class="border px-4 py-2">Clean fans, filters & case</td>
-          <td class="border px-4 py-2">Every 2–3 months</td>
-          <td class="border px-4 py-2">Removes dust that blocks airflow and overheats components</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Update GPU, chipset & BIOS</td>
-          <td class="border px-4 py-2">Monthly</td>
-          <td class="border px-4 py-2">Adds performance boosts, bug fixes, and new hardware support</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Run full malware scans</td>
-          <td class="border px-4 py-2">Monthly</td>
-          <td class="border px-4 py-2">Keeps shady background processes from stealing resources</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Benchmark before/after changes</td>
-          <td class="border px-4 py-2">As needed</td>
-          <td class="border px-4 py-2">Confirms if a tweak actually helped or hurt</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Log hardware/software changes</td>
-          <td class="border px-4 py-2">Every change</td>
-          <td class="border px-4 py-2">Essential for debugging future issues</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 class="text-xl font-semibold mb-2">🧰 Quick Tips</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li><strong>Use HWiNFO</strong> or similar tools to watch your thermals after every major change.</li>
-    <li><strong>Set calendar reminders</strong> for seasonal cleanings or driver checks.</li>
-    <li><strong>Track everything</strong> in your System Change Tracker (see Section 10 or use the Companion Toolkit).</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold mb-2">🚿 Bonus Deep-Clean Checklist (Every 6–12 Months)</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li>Replace thermal paste (especially on CPUs older than 2 years)</li>
-    <li>Clean fans with compressed air (hold them still while spraying)</li>
-    <li>Reseat GPU/RAM if system starts acting weird for no reason</li>
-    <li>Double-check boot order, BIOS settings, and RAM frequency</li>
-  </ul>
-
-  <p class="mb-2"><strong>🔥 Final Thought:</strong> A rig that’s cleaned, tracked, and tuned will outlive a dusty beast with better specs. Care = longevity.</p>
+<!-- Sidebar -->
+<aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="hover:underline" href="../index.html">🏠 Home</a>
+<a class="hover:underline" href="section1.html">Section 1</a>
+<a class="hover:underline" href="section2.html">Section 2</a>
+<a class="hover:underline" href="section3.html">Section 3</a>
+<a class="hover:underline" href="section4.html">Section 4</a>
+<a class="hover:underline" href="section5.html">Section 5</a>
+<a class="hover:underline" href="section6.html">Section 6</a>
+<a class="hover:underline" href="section7.html">Section 7</a>
+<a class="hover:underline" href="section8.html">Section 8</a>
+<a class="hover:underline" href="section9.html">Section 9</a>
+<a class="hover:underline" href="section10.html">Section 10</a>
+<a class="hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</aside>
+<!-- Mobile sidebar toggle -->
+<div class="md:hidden fixed top-4 left-4 z-50">
+<button class="bg-gray-700 text-white px-3 py-2 rounded" onclick="toggleSidebar()">☰</button>
+</div>
+<div class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden" id="mobileSidebar">
+<button class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300" onclick="toggleSidebar()">✖ Close</button>
+<h2 class="text-lg font-bold mb-4">Navigation</h2>
+<a class="block mb-2 hover:underline" href="../index.html">🏠 Home</a>
+<a class="block mb-2 hover:underline" href="section1.html">Section 1</a>
+<a class="block mb-2 hover:underline" href="section2.html">Section 2</a>
+<a class="block mb-2 hover:underline" href="section3.html">Section 3</a>
+<a class="block mb-2 hover:underline" href="section4.html">Section 4</a>
+<a class="block mb-2 hover:underline" href="section5.html">Section 5</a>
+<a class="block mb-2 hover:underline" href="section6.html">Section 6</a>
+<a class="block mb-2 hover:underline" href="section7.html">Section 7</a>
+<a class="block mb-2 hover:underline" href="section8.html">Section 8</a>
+<a class="block mb-2 hover:underline" href="section9.html">Section 9</a>
+<a class="block mb-2 hover:underline" href="section10.html">Section 10</a>
+<a class="block mb-2 hover:underline" href="disclaimer.html">⚠️ Disclaimer</a>
+<button class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+<!-- Main Content -->
+<main class="flex-1 p-6">
+<section class="max-w-4xl mx-auto" id="section6">
+<h2 class="text-2xl font-bold mb-4">🔧 Section 6: Maintenance &amp; Long-Term Performance Tips</h2>
+<p class="mb-6">A high-performance PC is like a high-performance car — it runs best when tuned, cleaned, and cared for. This section gives you a simple, effective maintenance routine that’ll keep your rig running fast, cool, and stable for years.</p>
+<h3 class="text-xl font-semibold mb-2">🧽 Your Long-Term Maintenance Routine</h3>
+<div class="overflow-x-auto mb-6">
+<table class="w-full table-auto border border-gray-300 text-sm">
+<thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+<tr>
+<th class="border px-4 py-2">Task</th>
+<th class="border px-4 py-2">Frequency</th>
+<th class="border px-4 py-2">Why It Matters</th>
+</tr>
+</thead>
+<tbody class="dark:bg-gray-800 dark:text-gray-100">
+<tr>
+<td class="border px-4 py-2">Clean fans, filters &amp; case</td>
+<td class="border px-4 py-2">Every 2–3 months</td>
+<td class="border px-4 py-2">Removes dust that blocks airflow and overheats components</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Update GPU, chipset &amp; BIOS</td>
+<td class="border px-4 py-2">Monthly</td>
+<td class="border px-4 py-2">Adds performance boosts, bug fixes, and new hardware support</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Run full malware scans</td>
+<td class="border px-4 py-2">Monthly</td>
+<td class="border px-4 py-2">Keeps shady background processes from stealing resources</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Benchmark before/after changes</td>
+<td class="border px-4 py-2">As needed</td>
+<td class="border px-4 py-2">Confirms if a tweak actually helped or hurt</td>
+</tr>
+<tr>
+<td class="border px-4 py-2">Log hardware/software changes</td>
+<td class="border px-4 py-2">Every change</td>
+<td class="border px-4 py-2">Essential for debugging future issues</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="text-xl font-semibold mb-2">🧰 Quick Tips</h3>
+<ul class="list-disc list-inside space-y-2 mb-6">
+<li><strong>Use HWiNFO</strong> or similar tools to watch your thermals after every major change.</li>
+<li><strong>Set calendar reminders</strong> for seasonal cleanings or driver checks.</li>
+<li><strong>Track everything</strong> in your System Change Tracker (see Section 10 or use the Companion Toolkit).</li>
+</ul>
+<h3 class="text-xl font-semibold mb-2">🚿 Bonus Deep-Clean Checklist (Every 6–12 Months)</h3>
+<ul class="list-disc list-inside space-y-2 mb-6">
+<li>Replace thermal paste (especially on CPUs older than 2 years)</li>
+<li>Clean fans with compressed air (hold them still while spraying)</li>
+<li>Reseat GPU/RAM if system starts acting weird for no reason</li>
+<li>Double-check boot order, BIOS settings, and RAM frequency</li>
+</ul>
+<p class="mb-2"><strong>🔥 Final Thought:</strong> A rig that’s cleaned, tracked, and tuned will outlive a dusty beast with better specs. Care = longevity.</p>
 </section>
-
-  </main>
+</main>
 </body>
 </html>

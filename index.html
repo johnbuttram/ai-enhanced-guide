@@ -1,13 +1,12 @@
 
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI-Enhanced Gaming Guide</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Enhanced Gaming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
     // Dark mode toggle logic
     function toggleDarkMode() {
       const html = document.documentElement;
@@ -25,53 +24,62 @@
   </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen px-6 py-8">
-<!-- Dark mode toggle -->
-<div class="flex justify-end mb-4">
-<button class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded shadow text-sm hover:opacity-90" onclick="toggleDarkMode()">
+
+  <!-- Dark mode toggle -->
+  <div class="flex justify-end mb-4">
+    <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded shadow text-sm hover:opacity-90">
       Toggle Dark Mode
     </button>
-</div>
-<!-- Disclaimer banner -->
-<div class="bg-yellow-100 text-yellow-900 p-4 rounded-md text-sm mb-6 shadow-sm">
-    ⚠️ Heads up: This guide is for informational purposes only. 
-    <a class="underline font-medium text-yellow-800 hover:text-yellow-700" href="sections/disclaimer.html">Read the full disclaimer</a>.
   </div>
-<!-- Page Title -->
-<h1 class="text-3xl font-bold mb-2 text-center">AI-Enhanced Gaming Guide</h1>
-<p class="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto">Master performance, visuals, and troubleshooting with AI-powered help. One section at a time.</p>
-<!-- Search bar -->
-<div class="max-w-md mx-auto mb-10">
-<input class="w-full px-4 py-2 border rounded shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white" placeholder="Search sections..." type="text"/>
-</div>
-<!-- Section Links -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-<!-- These will link to each separate section file -->
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section1.html">1. Getting Started with ChatGPT</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section2.html">2. Diagnose Common Issues</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section3.html">3. Optimize Based on Your Hardware</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section4.html">4. Visual Settings vs Performance</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section5.html">5. Maintenance Tips</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section6.html">6. Long-Term Stability &amp; Cleaning</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section7.html">7. Common Mistakes to Avoid</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section8.html">8. Prompt Templates for ChatGPT</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section9.html">9. Companion Toolkit Overview</a>
-<a class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/section10.html">10. Final Thoughts + Resource Hub</a>
-<a class="block bg-yellow-100 dark:bg-yellow-800 dark:text-white p-4 rounded shadow hover:shadow-md transition" href="sections/disclaimer.html">Disclaimer</a>
-</div>
-<!-- Footer -->
-<footer class="text-center text-xs text-gray-500 mt-12">
-    © 2025 Forge &amp; Fracture. <a class="underline" href="sections/disclaimer.html">Disclaimer</a>
-</footer>
-<section class="max-w-4xl mx-auto mt-12" id="toolkit-download">
-<h2 class="text-2xl font-bold mb-4">🧰 Get the Companion Toolkit</h2>
-<p class="mb-4">Download the free companion files that help you track, test, and tune your entire system more effectively.</p>
-<ul class="list-disc list-inside mb-4 space-y-2">
-<li><strong>System Change Tracker</strong> — Log changes and upgrades</li>
-<li><strong>FPS Log Sheet</strong> — Track performance improvements</li>
-<li><strong>Optimization Checklist</strong> — Stay on top of best practices</li>
-<li><strong>Prompt Planner</strong> — Save your best ChatGPT queries</li>
-</ul>
-<a class="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition" download="" href="Companion_Toolkit.zip">Download the Toolkit</a>
+
+  <!-- Disclaimer banner -->
+  <div class="bg-yellow-100 text-yellow-900 p-4 rounded-md text-sm mb-6 shadow-sm">
+    ⚠️ Heads up: This guide is for informational purposes only. 
+    <a href="sections/disclaimer.html" class="underline font-medium text-yellow-800 hover:text-yellow-700">Read the full disclaimer</a>.
+  </div>
+
+  <!-- Page Title -->
+  <h1 class="text-3xl font-bold mb-2 text-center">AI-Enhanced Gaming Guide</h1>
+  <p class="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto">Master performance, visuals, and troubleshooting with AI-powered help. One section at a time.</p>
+
+  <!-- Search bar -->
+  <div class="max-w-md mx-auto mb-10">
+    <input type="text" placeholder="Search sections..." class="w-full px-4 py-2 border rounded shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white" />
+  </div>
+
+  <!-- Section Links -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+    <!-- These will link to each separate section file -->
+    <a href="sections/section1.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">1. Section Title Placeholder</a>
+<a href="sections/section2.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">2. Section Title Placeholder</a>
+<a href="sections/section3.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">3. Section Title Placeholder</a>
+<a href="sections/section4.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">4. Section Title Placeholder</a>
+<a href="sections/section5.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">5. Section Title Placeholder</a>
+<a href="sections/section6.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">6. Section Title Placeholder</a>
+<a href="sections/section7.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">7. Section Title Placeholder</a>
+<a href="sections/section8.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">8. Section Title Placeholder</a>
+<a href="sections/section9.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">9. Section Title Placeholder</a>
+<a href="sections/section10.html" class="block bg-blue-100 dark:bg-blue-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">10. Section Title Placeholder</a>
+    <a href="sections/disclaimer.html" class="block bg-yellow-100 dark:bg-yellow-800 dark:text-white p-4 rounded shadow hover:shadow-md transition">Disclaimer</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-xs text-gray-500 mt-12">
+    &copy; 2025 Forge & Fracture. <a href="sections/disclaimer.html" class="underline">Disclaimer</a>
+  </footer>
+
+
+<section id="toolkit-download" class="max-w-4xl mx-auto mt-12">
+  <h2 class="text-2xl font-bold mb-4">🧰 Get the Companion Toolkit</h2>
+  <p class="mb-4">Download the free companion files that help you track, test, and tune your entire system more effectively.</p>
+  <ul class="list-disc list-inside mb-4 space-y-2">
+    <li><strong>System Change Tracker</strong> — Log changes and upgrades</li>
+    <li><strong>FPS Log Sheet</strong> — Track performance improvements</li>
+    <li><strong>Optimization Checklist</strong> — Stay on top of best practices</li>
+    <li><strong>Prompt Planner</strong> — Save your best ChatGPT queries</li>
+  </ul>
+  <a href="Companion_Toolkit.zip" download class="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition">Download the Toolkit</a>
 </section>
+
 </body>
 </html>
