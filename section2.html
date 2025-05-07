@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 2 – Hardware Overview</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Section 2 – Hardware Overview</h1>
+        <p>Use this to check system specs and feed them to ChatGPT.</p>
+        <pre><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
+What’s my current CPU, GPU, RAM, and storage setup? Please summarize in a format I can paste.
+        </code></pre>
+        <div class="tip">
+            <strong>Pro Tip:</strong> Save your best prompts in a folder or version them in a text doc.
+        </div>
+        <p><a href="section3.html">Next →</a></p>
+    </div>
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Prompt copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>
