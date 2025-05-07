@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enhanced Gaming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Load theme
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.classList.remove('dark');
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Toggle mobile sidebar
+    function toggleSidebar() {
+      document.getElementById('mobileSidebar').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="hover:underline">🏠 Home</a>
+<a href="section1.html" class="hover:underline">Section 1</a>
+<a href="section2.html" class="hover:underline">Section 2</a>
+<a href="section3.html" class="hover:underline">Section 3</a>
+<a href="section4.html" class="hover:underline">Section 4</a>
+<a href="section5.html" class="hover:underline">Section 5</a>
+<a href="section6.html" class="hover:underline">Section 6</a>
+<a href="section7.html" class="hover:underline">Section 7</a>
+<a href="section8.html" class="hover:underline">Section 8</a>
+<a href="section9.html" class="hover:underline">Section 9</a>
+<a href="section10.html" class="hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </aside>
+
+  <!-- Mobile sidebar toggle -->
+  <div class="md:hidden fixed top-4 left-4 z-50">
+    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
+  </div>
+  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
+    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
+<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
+<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
+<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
+<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
+<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
+<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
+<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
+<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
+<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
+<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    
+<section id="section1" class="max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">🧠 Section 1: Getting Started with AI Tools</h2>
+
+  <h3 class="text-xl font-semibold mb-2">💬 ChatGPT Basics</h3>
+  <p class="mb-4">Think of ChatGPT like your always-available, tech-savvy sidekick. Whether you’re troubleshooting FPS drops or figuring out BIOS weirdness, this AI has your back — if you know how to talk to it.</p>
+
+  <h4 class="text-lg font-semibold mb-2">🚀 Getting Set Up</h4>
+  <p class="mb-4">Starting is super simple:</p>
+
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full table-auto border border-gray-300 text-sm">
+      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+        <tr>
+          <th class="border px-4 py-2">Step</th>
+          <th class="border px-4 py-2">What to Do</th>
+        </tr>
+      </thead>
+      <tbody class="dark:bg-gray-800 dark:text-gray-100">
+        <tr><td class="border px-4 py-2">1</td><td class="border px-4 py-2">Visit <a href="https://chat.openai.com" target="_blank" class="text-blue-600 hover:underline">chat.openai.com</a></td></tr>
+        <tr><td class="border px-4 py-2">2</td><td class="border px-4 py-2">Create an account and verify your email</td></tr>
+        <tr><td class="border px-4 py-2">3</td><td class="border px-4 py-2">Choose between Free and Plus plans</td></tr>
+        <tr><td class="border px-4 py-2">4</td><td class="border px-4 py-2">Start asking questions like:<br><em>“Why is my game stuttering even though my FPS is stable?”</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 class="text-lg font-semibold mb-2">💸 Free vs Paid Versions</h4>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full table-auto border border-gray-300 text-sm">
+      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+        <tr>
+          <th class="border px-4 py-2">Plan</th>
+          <th class="border px-4 py-2">Description</th>
+        </tr>
+      </thead>
+      <tbody class="dark:bg-gray-800 dark:text-gray-100">
+        <tr>
+          <td class="border px-4 py-2">🆓 Free (GPT-3.5)</td>
+          <td class="border px-4 py-2">Great for basic tasks, quick fixes, and brainstorming — still powerful, just a bit limited with deeper tech prompts.</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">💎 ChatGPT Plus (GPT-4)</td>
+          <td class="border px-4 py-2">Handles multi-layered troubleshooting like a pro. Understands nuance, remembers context longer, and gives more accurate answers.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4"><strong>🛠 Pro Tip:</strong> Use clear, specific prompts. The more context you give it, the better it performs. And yep — you can ask it to help you write or rewrite prompts, too.</p>
+</section>
+
+  </main>
+</body>
+</html>

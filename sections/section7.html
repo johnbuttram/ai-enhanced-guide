@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enhanced Gaming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Load theme
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.classList.remove('dark');
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Toggle mobile sidebar
+    function toggleSidebar() {
+      document.getElementById('mobileSidebar').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="hover:underline">🏠 Home</a>
+<a href="section1.html" class="hover:underline">Section 1</a>
+<a href="section2.html" class="hover:underline">Section 2</a>
+<a href="section3.html" class="hover:underline">Section 3</a>
+<a href="section4.html" class="hover:underline">Section 4</a>
+<a href="section5.html" class="hover:underline">Section 5</a>
+<a href="section6.html" class="hover:underline">Section 6</a>
+<a href="section7.html" class="hover:underline">Section 7</a>
+<a href="section8.html" class="hover:underline">Section 8</a>
+<a href="section9.html" class="hover:underline">Section 9</a>
+<a href="section10.html" class="hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </aside>
+
+  <!-- Mobile sidebar toggle -->
+  <div class="md:hidden fixed top-4 left-4 z-50">
+    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
+  </div>
+  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
+    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
+<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
+<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
+<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
+<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
+<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
+<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
+<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
+<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
+<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
+<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    
+<section id="section7" class="max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">🚫 Section 7: Common Mistakes to Avoid</h2>
+  <p class="mb-6">Even seasoned gamers fall into these traps. Save yourself hours of headaches — dodge these five common killers of performance and stability.</p>
+
+  <div class="mb-6 space-y-8">
+    <div>
+      <h3 class="text-lg font-semibold mb-1">⚠️ 1. Ignoring Driver Updates</h3>
+      <p><strong>Problem:</strong> Outdated GPU or chipset drivers cause crashes, glitches, or lost performance.</p>
+      <p><strong>Fix:</strong> Always download drivers straight from NVIDIA, AMD, or your motherboard maker — skip third-party “driver updater” software.</p>
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+        <code id="mistake1Prompt" class="block whitespace-pre-wrap">What’s the latest stable driver for my NVIDIA RTX 3060, and how do I clean install it properly?</code>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('mistake1Prompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-1">🧼 2. Letting Bloatware Linger</h3>
+      <p><strong>Problem:</strong> Prebuilt PCs often come packed with junk apps that eat up RAM and slow your boot.</p>
+      <p><strong>Fix:</strong> Use tools like Revo Uninstaller and Autoruns to clean them out completely — not just “uninstall.”</p>
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+        <code id="mistake2Prompt" class="block whitespace-pre-wrap">What are the safest programs to uninstall on a new Windows 11 prebuilt gaming PC?</code>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('mistake2Prompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-1">🌡️ 3. Ignoring Temps & Airflow</h3>
+      <p><strong>Problem:</strong> Overheating causes thermal throttling, crashes, and shortens your hardware’s life.</p>
+      <p><strong>Fix:</strong> Monitor with HWiNFO, dust your fans, replace thermal paste every 1–2 years, and manage airflow.</p>
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+        <code id="mistake3Prompt" class="block whitespace-pre-wrap">How do I check my CPU and GPU temperatures safely while gaming?</code>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('mistake3Prompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-1">📦 4. Blindly Maxing Out Settings</h3>
+      <p><strong>Problem:</strong> Ultra presets can trash performance for barely-noticeable gains.</p>
+      <p><strong>Fix:</strong> Start on High or Medium. Then selectively boost textures and shadows — and ditch motion blur.</p>
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+        <code id="mistake4Prompt" class="block whitespace-pre-wrap">Which graphics settings can I safely lower in Cyberpunk 2077 without making it look bad?</code>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('mistake4Prompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-1">🧬 5. Skipping BIOS/UEFI Updates</h3>
+      <p><strong>Problem:</strong> You could be missing vital performance patches or hardware compatibility fixes.</p>
+      <p><strong>Fix:</strong> Check your motherboard’s support page. If your BIOS is more than a year old, consider updating (carefully!).</p>
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+        <code id="mistake5Prompt" class="block whitespace-pre-wrap">How do I safely check and update the BIOS on my ASUS B550 motherboard?</code>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('mistake5Prompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="font-semibold"><strong>🔥 Wrap-Up:</strong> It’s not just about FPS — it’s about stability, longevity, and smart habits. Avoiding these slip-ups will keep your rig purring and your games butter-smooth.</p>
+</section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enhanced Gaming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Load theme
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.classList.remove('dark');
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Toggle mobile sidebar
+    function toggleSidebar() {
+      document.getElementById('mobileSidebar').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="hover:underline">🏠 Home</a>
+<a href="section1.html" class="hover:underline">Section 1</a>
+<a href="section2.html" class="hover:underline">Section 2</a>
+<a href="section3.html" class="hover:underline">Section 3</a>
+<a href="section4.html" class="hover:underline">Section 4</a>
+<a href="section5.html" class="hover:underline">Section 5</a>
+<a href="section6.html" class="hover:underline">Section 6</a>
+<a href="section7.html" class="hover:underline">Section 7</a>
+<a href="section8.html" class="hover:underline">Section 8</a>
+<a href="section9.html" class="hover:underline">Section 9</a>
+<a href="section10.html" class="hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </aside>
+
+  <!-- Mobile sidebar toggle -->
+  <div class="md:hidden fixed top-4 left-4 z-50">
+    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
+  </div>
+  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
+    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
+<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
+<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
+<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
+<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
+<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
+<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
+<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
+<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
+<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
+<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    
+<section id="section2" class="max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">⚙️ Section 2: Optimization Fundamentals</h2>
+
+  <p class="mb-6">Before you jump into settings, drivers, and tweaks, let’s cover the basic mindset and terms. You’ll get more out of every section that follows if you understand what you’re actually optimizing — and why it matters.</p>
+
+  <h3 class="text-xl font-semibold mb-2">🎮 What Are You Optimizing For?</h3>
+  <ul class="list-disc list-inside mb-6 space-y-2">
+    <li><strong>FPS (Frames Per Second):</strong> More = smoother gameplay. Aim for consistency, not just big numbers.</li>
+    <li><strong>Frametime:</strong> Smoothness depends on even pacing between frames, not just high FPS.</li>
+    <li><strong>Input Latency:</strong> Time between action and on-screen response. Lower = snappier feel.</li>
+    <li><strong>Thermals:</strong> Keep temps in check to avoid crashes, throttling, or hardware wear.</li>
+    <li><strong>Visual Fidelity:</strong> How pretty your game looks. The trick is finding the sweet spot.</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold mb-2">🔍 Know Your Bottlenecks</h3>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full table-auto border border-gray-300 text-sm">
+      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+        <tr>
+          <th class="border px-4 py-2">Bottleneck Type</th>
+          <th class="border px-4 py-2">What It Looks Like</th>
+          <th class="border px-4 py-2">What to Try</th>
+        </tr>
+      </thead>
+      <tbody class="dark:bg-gray-800 dark:text-gray-100">
+        <tr>
+          <td class="border px-4 py-2">CPU Bottleneck</td>
+          <td class="border px-4 py-2">High CPU usage, low GPU usage, FPS drops in busy scenes</td>
+          <td class="border px-4 py-2">Lower draw distance, disable CPU-heavy features, tweak thread priority</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">GPU Bottleneck</td>
+          <td class="border px-4 py-2">GPU at 99–100%, FPS drops with visual clutter</td>
+          <td class="border px-4 py-2">Lower resolution, reduce shadows, textures, or reflections</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">RAM/VRAM Limit</td>
+          <td class="border px-4 py-2">Sudden stutters, asset pop-in, crashes when multitasking</td>
+          <td class="border px-4 py-2">Close background apps, lower texture quality, consider upgrades</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Storage/HDD Lag</td>
+          <td class="border px-4 py-2">Long load times, pauses in open-world games</td>
+          <td class="border px-4 py-2">Install games on SSD, reduce background disk activity</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="text-xl font-semibold mb-2">🧠 Mindset: Optimize for You</h3>
+  <p class="mb-4">Don’t chase benchmark numbers or YouTuber settings. Focus on your rig, your games, and your preferences. Stable > flashy. Comfortable > maxed.</p>
+</section>
+
+  </main>
+</body>
+</html>

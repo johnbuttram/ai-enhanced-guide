@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enhanced Gaming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Load theme
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.classList.remove('dark');
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Toggle mobile sidebar
+    function toggleSidebar() {
+      document.getElementById('mobileSidebar').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-2 text-sm">
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="hover:underline">🏠 Home</a>
+<a href="section1.html" class="hover:underline">Section 1</a>
+<a href="section2.html" class="hover:underline">Section 2</a>
+<a href="section3.html" class="hover:underline">Section 3</a>
+<a href="section4.html" class="hover:underline">Section 4</a>
+<a href="section5.html" class="hover:underline">Section 5</a>
+<a href="section6.html" class="hover:underline">Section 6</a>
+<a href="section7.html" class="hover:underline">Section 7</a>
+<a href="section8.html" class="hover:underline">Section 8</a>
+<a href="section9.html" class="hover:underline">Section 9</a>
+<a href="section10.html" class="hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-auto bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </aside>
+
+  <!-- Mobile sidebar toggle -->
+  <div class="md:hidden fixed top-4 left-4 z-50">
+    <button onclick="toggleSidebar()" class="bg-gray-700 text-white px-3 py-2 rounded">☰</button>
+  </div>
+  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-100 dark:bg-gray-800 p-4 text-sm z-40 hidden md:hidden">
+    <button onclick="toggleSidebar()" class="mb-4 text-right w-full text-xs text-gray-600 dark:text-gray-300">✖ Close</button>
+    <h2 class="text-lg font-bold mb-4">Navigation</h2>
+    <a href="../index.html" class="block mb-2 hover:underline">🏠 Home</a>
+<a href="section1.html" class="block mb-2 hover:underline">Section 1</a>
+<a href="section2.html" class="block mb-2 hover:underline">Section 2</a>
+<a href="section3.html" class="block mb-2 hover:underline">Section 3</a>
+<a href="section4.html" class="block mb-2 hover:underline">Section 4</a>
+<a href="section5.html" class="block mb-2 hover:underline">Section 5</a>
+<a href="section6.html" class="block mb-2 hover:underline">Section 6</a>
+<a href="section7.html" class="block mb-2 hover:underline">Section 7</a>
+<a href="section8.html" class="block mb-2 hover:underline">Section 8</a>
+<a href="section9.html" class="block mb-2 hover:underline">Section 9</a>
+<a href="section10.html" class="block mb-2 hover:underline">Section 10</a>
+    <a href="disclaimer.html" class="block mb-2 hover:underline">⚠️ Disclaimer</a>
+    <button onclick="toggleDarkMode()" class="mt-4 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-xs">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    
+<section id="section3" class="max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">🚨 Section 3: Troubleshooting</h2>
+  <p class="mb-4">Even optimized systems can act up. When your FPS tanks, your game crashes, or something just feels off — this section helps you dig in, rule things out, and fix it fast.</p>
+
+  <h3 class="text-xl font-semibold mb-2">🧭 First Steps for Any Weirdness</h3>
+  <ul class="list-disc list-inside mb-6 space-y-2">
+    <li><strong>Restart your PC</strong> — Resets hung processes and clears RAM.</li>
+    <li><strong>Monitor temps</strong> — Use HWiNFO to check for overheating.</li>
+    <li><strong>Close background apps</strong> — Especially launchers, browsers, RGB tools, and overlays.</li>
+    <li><strong>Run Windows Updates</strong> — Fixes weird compatibility bugs.</li>
+    <li><strong>Verify game files</strong> — Prevents crashes from corrupted installs.</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold mb-2">🧪 Common Problems & Fixes</h3>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full table-auto border border-gray-300 text-sm">
+      <thead class="bg-gray-100 dark:bg-gray-700 dark:text-white text-left">
+        <tr>
+          <th class="border px-4 py-2">Symptom</th>
+          <th class="border px-4 py-2">Likely Cause</th>
+          <th class="border px-4 py-2">What to Try</th>
+        </tr>
+      </thead>
+      <tbody class="dark:bg-gray-800 dark:text-gray-100">
+        <tr>
+          <td class="border px-4 py-2">Random stutters</td>
+          <td class="border px-4 py-2">CPU spikes, overlays, drive speed</td>
+          <td class="border px-4 py-2">Cap FPS, disable overlays, move game to SSD</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">FPS drops mid-session</td>
+          <td class="border px-4 py-2">Thermal throttling or RAM leaks</td>
+          <td class="border px-4 py-2">Monitor temps, reboot RAM-heavy games</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Game crashes (no error)</td>
+          <td class="border px-4 py-2">GPU/driver instability</td>
+          <td class="border px-4 py-2">Update drivers, reduce overclocks, check event logs</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">GPU underutilized</td>
+          <td class="border px-4 py-2">CPU bottleneck or game engine limit</td>
+          <td class="border px-4 py-2">Lower resolution, turn off frame caps, check CPU usage</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Audio crackles or delays</td>
+          <td class="border px-4 py-2">Sound driver glitch or USB polling issues</td>
+          <td class="border px-4 py-2">Set 48kHz sample rate, disable spatial/3D audio</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="text-xl font-semibold mb-2">🧰 Deep-Dive Tools</h3>
+  <ul class="list-disc list-inside mb-6 space-y-2">
+    <li><strong>Event Viewer</strong> — Check Application/System logs after a crash</li>
+    <li><strong>Reliability Monitor</strong> — See recent crashes, driver faults, or failed updates</li>
+    <li><strong>CapFrameX or RivaTuner</strong> — Track frametime spikes and frame pacing</li>
+    <li><strong>MemTest64 or Windows Memory Diagnostic</strong> — Check for bad RAM</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold mb-2">🗣️ Prompt Example</h3>
+  <div class="relative bg-gray-100 dark:bg-gray-800 text-sm rounded-md p-4 mb-6">
+    <code id="troubleshootingPrompt" class="block whitespace-pre-wrap">
+My game stutters randomly even though my FPS is high.
+I’ve capped FPS and turned off overlays. What else could cause this?
+I’m on a Ryzen 5600, RTX 3060, and 16GB of RAM.
+    </code>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('troubleshootingPrompt').textContent).then(() => alert('Prompt copied!'));" class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Copy</button>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>
