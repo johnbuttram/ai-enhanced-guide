@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 3 - Diagnosing Stutters</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Diagnosing Stutters with ChatGPT: Less Rage, More Frames</h1>
+
+        <p class="mb-4 leading-relaxed">There’s nothing worse than buttery-smooth 60 FPS… followed by a micro stutter that ruins your aim. Let’s fix that.</p>
+
+        <p class="mb-4 leading-relaxed">Stutters and FPS drops can come from anywhere — background apps, thermal throttling, driver issues, you name it. The trick is to break down the problem methodically, and ChatGPT can help you do just that.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 1: Describe the Problem to ChatGPT</h2>
+        <p class="mb-4 leading-relaxed">Start by telling ChatGPT:</p>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">I’m playing [Game Name] and experiencing [stuttering, FPS drops, frame pacing issues].
+It happens [e.g. when loading new areas or randomly every 10 seconds].</code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 2: Add Your Setup</h2>
+        <p class="mb-4 leading-relaxed">If you already did this in a previous prompt, great. If not, include:</p>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">System:
+- CPU: Ryzen 5 5600X
+- GPU: RTX 3070
+- RAM: 16GB DDR4
+- Storage: 1TB NVMe SSD
+- OS: Windows 11</code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 3: Ask for a Diagnosis Strategy</h2>
+        <p class="mb-4 leading-relaxed">Use something like:</p>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">Based on my setup and the problem, walk me through how to diagnose what’s causing the issue.
+I want to rule things out one by one.</code></pre>
+
+        <p class="mb-4 leading-relaxed">ChatGPT will likely give you a breakdown like:</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">Check background processes and CPU/GPU usage</li>
+            <li class="mb-2">Update or rollback GPU drivers</li>
+            <li class="mb-2">Check thermals to rule out overheating</li>
+            <li class="mb-2">Test another game to isolate whether it’s system-wide or game-specific</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 4: Go Deeper with Follow-Ups</h2>
+        <p class="mb-4 leading-relaxed">Use ChatGPT like a coach. Try asking:</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">“What tools should I use to monitor temps and usage?”</li>
+            <li class="mb-2">“Can you give me commands to reset Windows power settings?”</li>
+            <li class="mb-2">“How do I disable overlays that could be causing issues?”</li>
+        </ul>
+
+        <p class="mb-4 leading-relaxed">Each prompt takes you deeper into solving the issue without having to bounce around 12 forum threads and YouTube rabbit holes.</p>
+
+        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+            <strong>Pro Tip:</strong> You can also paste logs or screenshots from tools like Task Manager, MSI Afterburner, or LatencyMon. Ask ChatGPT to interpret them.
+        </div>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section4.html">Next: Real-Time Optimization Prompts →</a></p>
+    </div>
+
+    
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

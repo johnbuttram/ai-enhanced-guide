@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 1 - Know Thy Rig</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Know Thy Rig: Prepping ChatGPT with Your PC Specs</h1>
+
+        <p class="mb-4 leading-relaxed">If you want ChatGPT to help you optimize your gaming PC, you’ve gotta speak its language — and that starts with knowing what’s under the hood.</p>
+
+        <p class="mb-4 leading-relaxed">You don’t need to memorize hardware jargon or recite your GPU’s VRAM like a mantra. You just need a basic snapshot of your setup. Once ChatGPT has that info, it can give you <strong>targeted, relevant advice</strong> — not just generic tips.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Why This Matters</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">Some fixes only apply to AMD or NVIDIA cards — ChatGPT needs to know what you're rocking.</li>
+            <li class="mb-2">Older CPUs may bottleneck your GPU — ChatGPT can help spot that.</li>
+            <li class="mb-2">RAM, SSD, and even your monitor refresh rate play a role in game performance.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">What You'll Learn in This Section:</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">How to quickly get a summary of your PC specs</li>
+            <li class="mb-2">How to feed that info to ChatGPT in a way it understands</li>
+            <li class="mb-2">How to save this as a reusable prompt for future help</li>
+        </ul>
+
+        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+            <strong>Pro Tip:</strong> Save your system summary as a prompt snippet so you can re-use it anytime.
+        </div>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">New to ChatGPT? Here’s a Crash Course</h2>
+
+        <p class="mb-4 leading-relaxed">You don’t need to be a prompt wizard to get great results — but you do need to treat ChatGPT like a teammate, not a search engine. Here’s how to get started:</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2"><strong>Be specific:</strong> Instead of “fix my game,” say “My GPU is an RTX 3060 and I’m getting FPS drops in Elden Ring. What could be causing it?”</li>
+            <li class="mb-2"><strong>Give context:</strong> Share your specs, OS version, and even what you’ve already tried.</li>
+            <li class="mb-2"><strong>Use follow-ups:</strong> ChatGPT remembers context in the same conversation, so build on it. Ask “What’s next?” or “How do I do that step?”</li>
+            <li class="mb-2"><strong>Use bullet-style prompts:</strong> ChatGPT handles lists well. Try: “Here’s my system info. Give me 3 performance tips tailored to this.”</li>
+        </ul>
+
+        <p class="mb-4 leading-relaxed"><strong>Pro Tip:</strong> Save your favorite prompts in a Notepad file or text doc so you can reuse them later.</p>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section2.html">Next up: Grab your specs with HWiNFO →</a></p>
+    </div>
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

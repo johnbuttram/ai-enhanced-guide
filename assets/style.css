@@ -1,0 +1,482 @@
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a.button {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .mockup {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #000;
+            margin-top: 15px;
+        }
+        ul {
+            list-style: square inside;
+            margin: 10px 0 30px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #999;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a {
+            color: #00f7ff;
+            text-decoration: none;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .tip {
+            background-color: #1e1e1e;
+            border-left: 4px solid #00f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+body {
+            background-color: #0e0e0e;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00f7ff;
+        }
+        a.button {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background-color: #00f7ff;
+            color: #0e0e0e;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .mockup {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #000;
+            margin-top: 15px;
+        }
+        ul {
+            list-style: square inside;
+            margin: 10px 0 30px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #999;
+        }

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 8 - Prompt Packs & Templates</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Prompt Packs & Templates: Your AI Arsenal</h1>
+
+        <p class="mb-4 leading-relaxed">If you’ve followed this guide, you’ve already written better prompts than 90% of users. Now it’s time to build your own AI toolkit — reusable, remixable prompts that you can fire off whenever your rig starts acting up.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">What’s a Prompt Pack?</h2>
+        <p class="mb-4 leading-relaxed">A prompt pack is a bundle of focused, pre-written prompts you can use for a specific scenario. Think of it like a cheat sheet for ChatGPT. You don’t rewrite them from scratch — you just tweak the inputs.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt Pack Example: FPS Drops</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
+Describe the scenario: “I’m playing [game] and FPS drops occur [frequency].”
+Add setup: “Specs: RTX 3070, Ryzen 5 5600X, 16GB RAM.”
+Ask for help: “What should I look at first?”
+Follow-up: “Can you walk me through how to test CPU vs GPU bottlenecks?”
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt Pack Example: Clean Up & Speed Up</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
+“Give me a step-by-step system cleanup guide for Windows 11 focused on gaming performance.”
+“Include things like temp files, startup apps, unnecessary services, and bloatware.”
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt Template: Modular Style</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
+[Describe the Problem]
+e.g. “FPS drops when entering new zones in [Game Name]”
+
+[System Specs]
+e.g. “RTX 3060, Ryzen 5600X, 16GB RAM, 1440p, SSD”
+
+[Ask]
+e.g. “What should I troubleshoot first?”
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Where to Store Prompt Packs</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">Text files in a “Prompt Vault” folder</li>
+            <li class="mb-2">Markdown in Notion or Obsidian</li>
+            <li class="mb-2">GitHub Gist (for syncing + sharing)</li>
+            <li class="mb-2">ChatGPT’s custom instructions (save in memory)</li>
+        </ul>
+
+        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+            <strong>Pro Tip:</strong> Don’t hoard prompts — refine and re-test them. The best ones evolve over time just like your setup.
+        </div>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section9.html">Next: Creating Your Own AI Gaming Fix Kit →</a></p>
+    </div>
+
+    
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

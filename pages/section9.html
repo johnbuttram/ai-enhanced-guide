@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 9 - Creating Your Fix Kit</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Build Your Fix Kit: Your Custom AI-Powered Gaming Toolbox</h1>
+
+        <p class="mb-4 leading-relaxed">You’ve got the tools, the prompts, and the experience. Now let’s turn that into a real Fix Kit — something you can open up whenever a game runs like trash, your frames tank, or your system just isn’t feeling right.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">What Goes in Your Fix Kit?</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2"><strong>Prompt Packs:</strong> Bundles for diagnosing issues, optimizing settings, and cleaning up bloat</li>
+            <li class="mb-2"><strong>Favorite Tools:</strong> HWiNFO, MSI Afterburner, DDU, Revo, LatencyMon, etc.</li>
+            <li class="mb-2"><strong>Scripts:</strong> Batch or PowerShell tools you use regularly (ChatGPT can help generate them)</li>
+            <li class="mb-2"><strong>Prompt Templates:</strong> Custom ones you’ve refined through use</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Help Me Organize My Fix Kit</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
+Help me organize a personal Fix Kit folder on my PC with subfolders for:
+- Tools
+- Prompt Packs
+- Batch Scripts
+- System Snapshots
+Include naming tips and ideas for maintaining it long-term.
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Generate a Printable Version</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
+Take my system specs and most-used prompts and format them into a printable cheat sheet PDF.
+Add room for writing notes and tracking system changes.
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Build a Shared Version</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
+Help me turn my Fix Kit into a shareable GitHub repo or ZIP pack.
+Include a readme that explains how to use it for other gamers.
+        </code></pre>
+
+        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+            <strong>Pro Tip:</strong> A Fix Kit isn’t just for solving problems — it’s for preventing them. Keep it updated, organized, and ready to deploy anytime.
+        </div>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section10.html">Next: Guide Wrap-Up & Bonus Content →</a></p>
+    </div>
+
+    
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

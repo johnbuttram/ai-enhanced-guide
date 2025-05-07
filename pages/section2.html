@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 2 - HWiNFO and ChatGPT</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">ChatGPT Needs Specs: Using HWiNFO the Smart Way</h1>
+
+        <p class="mb-4 leading-relaxed">Before ChatGPT can help you boost your FPS or fix weird performance bugs, it needs to know what it’s working with. That’s where <strong>HWiNFO</strong> comes in — a free tool that gives you a full snapshot of your system’s guts.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 1: Download and Launch HWiNFO</h2>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li class="mb-2">Go to <a class="text-cyan-400 underline hover:text-cyan-300" href="https://www.hwinfo.com/download/" target="_blank">HWiNFO.com</a></li>
+            <li class="mb-2">Choose the “Portable” version so you don’t have to install anything</li>
+            <li class="mb-2">Run it and select “Summary-only” mode when prompted</li>
+        </ol>
+
+        <p class="mb-4 leading-relaxed">You’ll get a clean overview of your CPU, GPU, RAM, motherboard, and more.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 2: Grab the Key Info</h2>
+        <p class="mb-4 leading-relaxed">You don’t need to dump 200 lines into ChatGPT. Just copy these essentials:</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">CPU (Model and Clock Speed)</li>
+            <li class="mb-2">GPU (Model and VRAM)</li>
+            <li class="mb-2">RAM (Total GB)</li>
+            <li class="mb-2">Storage Type (SSD or HDD)</li>
+            <li class="mb-2">Operating System</li>
+        </ul>
+
+        <p class="mb-4 leading-relaxed">You can either type them manually or take a screenshot and use ChatGPT’s vision feature (if your version supports it).</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Step 3: Build Your Prompt</h2>
+        <p class="mb-4 leading-relaxed">Here’s how to format it for best results:</p>
+
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4 relative"><button class="absolute top-2 right-2 bg-cyan-400 text-black px-3 py-1 rounded text-sm font-semibold hover:bg-cyan-300" onclick="copyCode()">Copy</button><code id="specPrompt" class="font-mono text-sm whitespace-pre-wrap">
+My PC has a Ryzen 5 3600 CPU, 16GB of RAM, an RTX 3060 with 12GB VRAM, and a 1TB SSD running Windows 11.
+I get random FPS drops in Call of Duty Warzone. Can you help me optimize performance based on this setup?
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Why It Works</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li class="mb-2">It gives ChatGPT the full picture so it won’t suggest irrelevant fixes</li>
+            <li class="mb-2">It opens the door for real troubleshooting, not vague tips</li>
+            <li class="mb-2">It gives you better follow-up recommendations (drivers, settings, bottlenecks)</li>
+        </ul>
+
+        <p class="mb-4 leading-relaxed">Once you’ve done this once, save the prompt or base template somewhere. You’ll reuse it a lot as we go deeper in the guide.</p>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section3.html">Next: Diagnosing Stutters & FPS Drops →</a></p>
+    </div>
+
+    
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

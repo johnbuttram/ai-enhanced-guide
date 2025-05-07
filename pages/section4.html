@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section 4 - Real-Time Optimization Prompts</title>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Nav Button -->
+    <div class="md:hidden fixed top-4 left-4 z-50">
+        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
+            Menu
+        </button>
+    </div>
+
+    <!-- Sidebar for Mobile -->
+    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
+        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
+        <nav class="flex flex-col gap-2">
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
+            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
+        </nav>
+    </aside>
+
+    <!-- Main content wrapper -->
+    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Real-Time Optimization Prompts: Turn ChatGPT into Your Co-Pilot</h1>
+
+        <p class="mb-4 leading-relaxed">You’ve got your specs. You’ve diagnosed your stutter. Now it’s time to squeeze every ounce of performance from your system — live and in the moment. These prompts help you use ChatGPT like a personal tech support agent that never sleeps.</p>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Clean Up Background Tasks</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
+What background processes or services can I safely disable on Windows 11 to improve gaming performance?
+Give me a step-by-step guide tailored to a system with 16GB RAM and an RTX 3060.
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Tune Windows Settings</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
+What Windows settings can I tweak for better game performance?
+I want performance mode, fast boot, minimal UI, and nothing running in the background unless it’s critical.
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: GPU-Specific Tuning</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
+Here’s my GPU: NVIDIA RTX 3060.
+Help me optimize the NVIDIA Control Panel settings for competitive FPS gaming.
+I mainly play Apex Legends and Cyberpunk 2077.
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Game-Specific Tuning</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt4')">Copy</button><code id="prompt4">
+I play Skyrim Special Edition with a few mods and get minor FPS dips in open areas.
+What tweaks or .ini changes can I make to improve performance without ruining visuals?
+        </code></pre>
+
+        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Real-Time Diagnostic Help</h2>
+        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt5')">Copy</button><code id="prompt5">
+I just ran Task Manager while playing and saw CPU usage spike to 95% and GPU drop to 50%.
+What could be causing this imbalance? How do I fix it?
+        </code></pre>
+
+        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+            <strong>Pro Tip:</strong> The more detail you feed ChatGPT (exact games, settings, bottlenecks), the more tailored your optimization prompts become. Think like a power user, ask like a gamer.
+        </div>
+
+        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section5.html">Next: Building Your Optimization Toolkit →</a></p>
+    </div>
+
+    
+    <script src="js/clipboard.js"></script>
+
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
