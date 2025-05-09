@@ -1,110 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Section 6 - AI-Driven Maintenance</title>
-    
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Define main content area structure, heading levels, and consistent content formatting using Tailwind CSS." />
+    <meta property="og:title" content="Section 6: Main Content Structure & Heading Hierarchy" />
+    <meta property="og:description" content="Best practices for building readable, semantic, and accessible content layouts with Tailwind." />
+    <meta property="og:image" content="/assets/img/og_section6.jpg" />
+    <title>Section 6: Main Content Structure & Heading Hierarchy</title>
+    <script src="/assets/js/theme-toggle.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography&version=3.4.1"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <a href="#main" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-cyan-500 text-black font-bold px-3 py-2 z-50">Skip to main content</a>
 
-<body class="flex min-h-screen bg-gray-900 text-white">
+    <main id="main" class="flex-1 p-6 max-w-6xl mx-auto space-y-6 pt-20 md:pt-6">
+      <h1 class="text-3xl font-bold mb-6">Section 6: Main Content Structure & Heading Hierarchy</h1>
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
+      <p>Use a <code>&lt;main id="main"&gt;</code> element for the main content area of each page. This ensures accessibility and enables skip links to work correctly.</p>
 
-    <!-- Mobile Nav Button -->
-    <div class="md:hidden fixed top-4 left-4 z-50">
-        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
-            Menu
-        </button>
-    </div>
+<pre><code>&lt;main id="main" class="flex-1 p-6 bg-gray-900 text-white"&gt;
+  &lt;h1 class="text-3xl font-bold mb-4"&gt;Section 2: Topic Name&lt;/h1&gt;
+  &lt;p class="mb-4"&gt;Introductory paragraph for this section...&lt;/p&gt;
+  &lt;!-- page content, images, code blocks, etc. --&gt;
+&lt;/main&gt;</code></pre>
 
-    <!-- Sidebar for Mobile -->
-    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
+      <h2 class="text-2xl font-semibold">Heading Levels</h2>
+      <p>Start each page with an <code>&lt;h1&gt;</code> for the page title. Subsections should follow a logical heading order: <code>h2</code>, then <code>h3</code>, etc. Do not skip levels.</p>
 
-    <!-- Main content wrapper -->
-    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+      <h2 class="text-2xl font-semibold">Content Styling</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Wrap text in <code>&lt;p&gt;</code> and use <code>mb-4</code> for spacing.</li>
+        <li>Use <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> for lists. Add <code>list-disc list-inside</code> if needed.</li>
+        <li>Use <code>&lt;blockquote&gt;</code> or styled <code>&lt;div&gt;</code> for important notes.</li>
+        <li>Avoid using <code>.prose</code> class to retain color control in dark mode.</li>
+        <li>Manually add Tailwind classes like <code>font-bold</code> to headings.</li>
+      </ul>
 
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Stay Sharp: AI-Driven Maintenance Habits That Actually Help</h1>
+      <h2 class="text-2xl font-semibold">Images in Content</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Always include <code>alt</code> text.</li>
+        <li>Use <code>max-w-full h-auto</code> to make images responsive.</li>
+        <li>Center images with <code>mx-auto</code> or use <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code>.</li>
+      </ul>
 
-        <p class="mb-4 leading-relaxed">Once your system’s humming, the next challenge is keeping it that way. Good news — ChatGPT can help with that too. You don’t need to memorize every little maintenance task. You just need to build a system that asks the right questions on a schedule.</p>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Set Up a Weekly Maintenance Checklist</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
-Help me create a weekly PC gaming maintenance checklist.
-Include things like clearing temp files, scanning for updates, and checking for thermal issues.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Auto-Generate a Batch File</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
-Write a batch script I can run weekly that:
-- Clears the Windows temp folder
-- Resets DNS cache
-- Opens HWiNFO and MSI Afterburner
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Build a Reminder Workflow</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
-Suggest a way to remind myself every Saturday to do basic PC upkeep using either Task Scheduler, Windows notifications, or a lightweight reminder app.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Monitor Change Over Time</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt4')">Copy</button><code id="prompt4">
-What tools can I use to track system changes over time (drivers, performance, file bloat)?
-How do I pair that with ChatGPT to analyze trends or regressions?
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Schedule Prompt Packs</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt5')">Copy</button><code id="prompt5">
-Can you help me build a “prompt pack” that rotates weekly for system checks?
-One week focus on drivers, another on background apps, etc.
-        </code></pre>
-
-        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
-            <strong>Pro Tip:</strong> System maintenance is boring — until you skip it for six months and wonder why your games crash. ChatGPT helps you stay consistent without thinking about it.
-        </div>
-
-        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section7.html">Next: Advanced Prompt Crafting for Power Users →</a></p>
-    </div>
-
-    
-    <script src="js/clipboard.js"></script>
-
+      <p><strong>Consistency is key:</strong> All pages should follow the same layout and formatting rules to maintain a professional and readable experience.</p>
     </main>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
+  </body>
 </html>

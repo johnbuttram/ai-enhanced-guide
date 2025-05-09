@@ -1,120 +1,73 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Section 5 - Optimization Toolkit</title>
-    
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Build a responsive navigation system with accessible desktop sidebars and mobile drawer menus using Tailwind CSS." />
+    <meta property="og:title" content="Section 5: Navigation System (Desktop & Mobile)" />
+    <meta property="og:description" content="Learn how to structure a sidebar and mobile drawer navigation with accessibility and responsiveness in mind." />
+    <meta property="og:image" content="/assets/img/og_section5.jpg" />
+    <title>Section 5: Navigation System (Desktop & Mobile)</title>
+    <script src="/assets/js/theme-toggle.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography&version=3.4.1"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <a href="#main" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-cyan-500 text-black font-bold px-3 py-2 z-50">Skip to main content</a>
 
-<body class="flex min-h-screen bg-gray-900 text-white">
+    <main id="main" class="flex-1 p-6 max-w-6xl mx-auto space-y-6 pt-20 md:pt-6">
+      <h1 class="text-3xl font-bold mb-6">Section 5: Navigation System (Desktop & Mobile)</h1>
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
+      <p>One key feature is a unified navigation menu that works on both desktop and mobile:</p>
 
-    <!-- Mobile Nav Button -->
-    <div class="md:hidden fixed top-4 left-4 z-50">
-        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
-            Menu
-        </button>
-    </div>
+      <h2 class="text-2xl font-semibold mt-6">Desktop Sidebar</h2>
+      <p>On medium and larger screens (<code>md:</code> breakpoint and up), show a sidebar on the left side of the screen containing the site title and navigation links.</p>
+      <p>Use an <code>&lt;aside&gt;</code> element for the sidebar, with an appropriate label (e.g., <code>aria-label="Main Sidebar Navigation"</code>).</p>
 
-    <!-- Sidebar for Mobile -->
-    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
+<pre><code>&lt;aside class="hidden md:flex md:flex-col md:w-64 md:h-screen bg-gray-800 p-4 text-white print:hidden" aria-label="Main Sidebar Navigation"&gt;
+  &lt;h1 class="text-2xl font-bold mb-4 text-cyan-400"&gt;Site Name&lt;/h1&gt;
+  &lt;nav class="flex flex-col gap-2"&gt;
+    &lt;a href="index.html" class="hover:text-cyan-300"&gt;🏠 Home&lt;/a&gt;
+    &lt;a href="pages/section1.html" class="hover:text-cyan-300"&gt;Section 1: Introduction&lt;/a&gt;
+    &lt;a href="pages/section2.html" class="hover:text-cyan-300" aria-current="page"&gt;Section 2: Topic Name&lt;/a&gt;
+    &lt;a href="pages/section10.html" class="hover:text-cyan-300"&gt;Section 10: Final Steps&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/aside&gt;</code></pre>
 
-    <!-- Main content wrapper -->
-    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
+      <p>The sidebar is hidden by default and becomes visible on medium+ screens. Use high contrast colors and logical heading structure. Consider <code>&lt;header&gt;</code> or <code>role="heading"</code> wrappers for semantic structure.</p>
 
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Your Optimization Toolkit: Tools + ChatGPT = Total Control</h1>
+      <h2 class="text-2xl font-semibold mt-6">Mobile Drawer Menu</h2>
 
-        <p class="mb-4 leading-relaxed">This isn’t just a one-time fix — it’s about building a setup that works for you long-term. Here are the go-to tools every gamer should have, and how to pair them with ChatGPT to turn them into optimization machines.</p>
+      <h3 class="text-xl font-semibold mt-4">Menu Button</h3>
+<pre><code>&lt;button id="menu-toggle" class="md:hidden fixed top-2 left-2 z-30 bg-cyan-400 text-black font-bold px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-300" aria-label="Open menu"&gt;
+  ☰ Menu
+&lt;/button&gt;</code></pre>
 
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">1. HWiNFO (You’ve Already Got This)</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Hardware info, sensor monitoring, system reports</p>
-        <p class="mb-4 leading-relaxed"><strong>Ask ChatGPT:</strong></p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
-Based on this HWiNFO report, are there any temperature or performance red flags I should know about?
-        </code></pre>
+      <h3 class="text-xl font-semibold mt-4">Drawer Sidebar</h3>
+<pre><code>&lt;div id="mobile-sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-800 p-4 text-white transform -translate-x-full transition-transform duration-300 z-40 print:hidden"&gt;
+  &lt;h1 class="text-2xl font-bold mb-4 text-cyan-400"&gt;Site Name&lt;/h1&gt;
+  &lt;nav class="flex flex-col gap-2"&gt;
+    &lt;a href="index.html" class="hover:text-cyan-300"&gt;🏠 Home&lt;/a&gt;
+    &lt;a href="section1.html" class="hover:text-cyan-300"&gt;Section 1: Introduction&lt;/a&gt;
+    &lt;a href="section2.html" class="hover:text-cyan-300" aria-current="page"&gt;Section 2: Topic Name&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;button id="theme-toggle" class="mt-6 text-sm border border-white px-3 py-2 rounded hover:bg-white hover:text-black"&gt;Toggle Theme&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">2. Task Manager / Resource Monitor</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Real-time CPU/GPU/RAM usage, app-level impact</p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
-Here’s a screenshot from Task Manager while I’m gaming.
-What could be causing high CPU usage and stuttering?
-        </code></pre>
+      <h3 class="text-xl font-semibold mt-4">Overlay</h3>
+<pre><code>&lt;div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden"&gt;&lt;/div&gt;</code></pre>
 
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">3. LatencyMon</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Diagnosing system latency issues and DPC spikes</p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
-I ran LatencyMon and it says “Your system appears to be suitable for real-time audio.” 
-What does this mean for gaming performance?
-        </code></pre>
+      <p>Clicking the overlay or the menu button should close the drawer. The drawer mirrors the desktop nav. Maintain accessibility roles like <code>role="navigation"</code> and ARIA labels.</p>
 
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">4. DDU (Display Driver Uninstaller)</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Fully wiping GPU drivers before clean installs</p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt4')">Copy</button><code id="prompt4">
-How do I use DDU to safely uninstall my GPU drivers in Safe Mode?
-Give me a step-by-step guide with precautions.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">5. Revo Uninstaller</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Deep cleaning old software and driver leftovers</p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt5')">Copy</button><code id="prompt5">
-I want to fully uninstall MSI Afterburner and all registry traces.
-Guide me through using Revo Uninstaller for this.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">6. ChatGPT (Yeah, Obviously)</h2>
-        <p class="mb-4 leading-relaxed"><strong>Use it for:</strong> Explaining, optimizing, generating scripts, batch files, step-by-step guides</p>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt6')">Copy</button><code id="prompt6">
-Generate a Windows batch file that clears my temp files, resets DNS cache, and closes background apps.
-        </code></pre>
-
-        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
-            <strong>Pro Tip:</strong> Add these tools to a folder called “Fix Kit” on your desktop. That + ChatGPT = instant problem solver.
-        </div>
-
-        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section6.html">Next: AI-Driven Maintenance Habits →</a></p>
-    </div>
-
-    
-    <script src="js/clipboard.js"></script>
-
+      <h2 class="text-2xl font-semibold mt-6">Navigation Behavior</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Sidebar is fixed or scrolls with page (decide consistently).</li>
+        <li>Apply <code>md:ml-64</code> margin to <code>&lt;main&gt;</code> if using fixed sidebar.</li>
+        <li>Use <code>aria-current="page"</code> for current page indicator.</li>
+        <li>Ensure skip link targets <code>#main</code> and is focusable.</li>
+        <li>Use consistent <code>hover:text</code> styles and padding across links.</li>
+        <li>Ensure mobile nav resets on page load (menu closed by default).</li>
+      </ul>
     </main>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
+  </body>
 </html>

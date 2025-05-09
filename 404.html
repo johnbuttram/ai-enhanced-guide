@@ -1,65 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>404 – Page Not Found</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="js/clipboard.js" defer></script>
-</head>
-
-<body class="flex min-h-screen bg-gray-900 text-white">
-
-    <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
-
-    <!-- Mobile Nav Button -->
-    <div class="md:hidden fixed top-4 left-4 z-50">
-        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
-            Menu
-        </button>
-    </div>
-
-    <!-- Sidebar for Mobile -->
-    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
-
-    <!-- Main content wrapper -->
-    <main class="flex-1 ml-0 md:ml-64 p-6 w-full max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold text-cyan-400 mb-4">404 – Page Not Found</h1>
-        <p class="mb-4 leading-relaxed">Looks like this page doesn’t exist. But don’t worry — we’ve got plenty of helpful content right over here.</p>
-        <a href="index.html" class="inline-block bg-cyan-400 text-black font-bold px-6 py-3 rounded hover:bg-cyan-300">Back to Home</a>
-    </main>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   ChatFixedIt Guide
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center">
+   <h1 class="text-4xl font-bold mb-4">
+    404 - Page Not Found
+   </h1>
+   <a class="text-cyan-400 underline" href="pages/section1.html">
+    Start Reading the Guide
+   </a>
+  </div>
+ </body>
 </html>

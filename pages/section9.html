@@ -1,109 +1,264 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Section 9 - Creating Your Fix Kit</title>
-    
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-
-<body class="flex min-h-screen bg-gray-900 text-white">
-
-    <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
-
-    <!-- Mobile Nav Button -->
-    <div class="md:hidden fixed top-4 left-4 z-50">
-        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
-            Menu
-        </button>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Section 9 &ndash; Build Your Fix Kit
+  </title>
+  <meta content="Use ChatGPT to build your own AI-driven Fix Kit to troubleshoot and maintain your PC with precision." name="description"/>
+  <meta content="Section 9 &ndash; Build Your Fix Kit with ChatFixedIt" property="og:title"/>
+  <meta content="Use ChatGPT to build your own AI-driven Fix Kit to troubleshoot and maintain your PC with precision." property="og:description"/>
+  <meta content="/assets/img/og_section9.jpg" property="og:image"/>
+  <!-- This og:image path needs to be updated and finalized! -->
+  <meta content="Section 9 &ndash; Build Your Fix Kit with ChatFixedIt" name="twitter:title"/>
+  <meta content="Use ChatGPT to build your own AI-driven Fix Kit to troubleshoot and maintain your PC with precision." name="twitter:description"/>
+  <meta content="/assets/img/og_section9.jpg" name="twitter:image"/>
+  <script defer="defer" src="/assets/js/site.js">
+  </script>
+ </head>
+ <body class="bg-gray-900 text-whitee">
+  <a class="sr-only focus:not-sr-only absolute top-0 left-0 bg-cyan-500 text-black p-2 z-50" href="#main">
+   Skip to main content
+  </a>
+  <!-- Mobile Nav Button -->
+  <button class="md:hidden fixed top-2 left-2 z-30 bg-cyan-400 text-black font-bold px-4 py-1 rounded print:hidden" id="menu-toggle">
+   Menu
+  </button>
+  <!-- Mobile Overlay -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden print:hidden" id="mobile-overlay">
+  </div>
+  <!-- Mobile Sidebar -->
+  <div class="fixed top-0 left-0 w-64 h-full bg-gray-800 p-4 z-50 transform -translate-x-full transition-transform duration-300 md:hidden print:hidden text-white" id="mobile-sidebar">
+   <h2 class="text-xl font-bold mb-4 text-cyan-400">
+    ChatFixedIt
+   </h2>
+   <nav class="flex flex-col gap-y-2">
+    <a class="hover:text-cyan-400" href="index.html">
+     🏠 Home
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section1.html">
+     Section 1: Getting Started
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section2.html">
+     Section 2: HWiNFO &amp; System Specs
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section3.html">
+     Section 3: Diagnosing Stutters
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section4.html">
+     Section 4: Real-Time Optimization
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section5.html">
+     Section 5: Optimization Toolkit
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section6.html">
+     Section 6: Maintenance Habits
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section7.html">
+     Section 7: Advanced Prompt Crafting
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section8.html">
+     Section 8: Companion Toolkit
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section9.html">
+     Section 9: Optimization Checklist
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section10.html">
+     Section 10: Final Steps &amp; Recap
+    </a>
+    <a class="hover:text-cyan-400" href="landing.html">
+     Bonus Landing Page
+    </a>
+   </nav>
+   <button aria-label="Toggle light or dark mode" class="mt-4 px-4 py-2 text-sm font-semibold border border-white rounded hover:bg-white hover:text-black transition w-full" id="theme-toggle">
+    Toggle Theme
+   </button>
+  </div>
+  <!-- Layout Wrapper -->
+  <div class="flex flex-row min-h-screen bg-gray-900 text-whitee">
+   <!-- Desktop Sidebar -->
+   <aside aria-label="Main Sidebar Navigation" class="hidden md:flex w-64 h-full bg-gray-800 p-4 flex-col print:hidden text-white" role="navigation">
+    <h2 class="text-xl font-bold mb-4 text-cyan-400">
+     ChatFixedIt
+    </h2>
+    <nav class="flex flex-col gap-y-2">
+     <a class="hover:text-cyan-400" href="index.html">
+      🏠 Home
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section1.html">
+      Section 1: Getting Started
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section2.html">
+      Section 2: HWiNFO &amp; System Specs
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section3.html">
+      Section 3: Diagnosing Stutters
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section4.html">
+      Section 4: Real-Time Optimization
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section5.html">
+      Section 5: Optimization Toolkit
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section6.html">
+      Section 6: Maintenance Habits
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section7.html">
+      Section 7: Advanced Prompt Crafting
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section8.html">
+      Section 8: Companion Toolkit
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section9.html">
+      Section 9: Optimization Checklist
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section10.html">
+      Section 10: Final Steps &amp; Recap
+     </a>
+     <a class="hover:text-cyan-400" href="landing.html">
+      Bonus Landing Page
+     </a>
+    </nav>
+    <button aria-label="Toggle light or dark mode" class="mt-auto px-4 py-2 text-sm font-semibold border border-white rounded hover:bg-white hover:text-black transition" id="theme-toggle">
+     Toggle Theme
+    </button>
+   </aside>
+   <!-- Main Content -->
+   <main class="flex-1 p-6 max-w-6xl mx-auto space-y-6 pt-20 md:pt-6 text-white" id="main">
+    <div class="text-3xl font-bold text-cyan-400 border-b border-cyan-700 pb-2">
+     Build Your Fix Kit: Your AI-Powered Gaming Toolbox
     </div>
-
-    <!-- Sidebar for Mobile -->
-    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
-
-    <!-- Main content wrapper -->
-    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
-
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Build Your Fix Kit: Your Custom AI-Powered Gaming Toolbox</h1>
-
-        <p class="mb-4 leading-relaxed">You’ve got the tools, the prompts, and the experience. Now let’s turn that into a real Fix Kit — something you can open up whenever a game runs like trash, your frames tank, or your system just isn’t feeling right.</p>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">What Goes in Your Fix Kit?</h2>
-        <ul class="list-disc pl-6 space-y-2">
-            <li class="mb-2"><strong>Prompt Packs:</strong> Bundles for diagnosing issues, optimizing settings, and cleaning up bloat</li>
-            <li class="mb-2"><strong>Favorite Tools:</strong> HWiNFO, MSI Afterburner, DDU, Revo, LatencyMon, etc.</li>
-            <li class="mb-2"><strong>Scripts:</strong> Batch or PowerShell tools you use regularly (ChatGPT can help generate them)</li>
-            <li class="mb-2"><strong>Prompt Templates:</strong> Custom ones you’ve refined through use</li>
-        </ul>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Help Me Organize My Fix Kit</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt1')">Copy</button><code id="prompt1">
-Help me organize a personal Fix Kit folder on my PC with subfolders for:
+    <nav class="text-sm text-gray-400 mb-2 print:hidden">
+     Section 9: Build Your Fix Kit
+    </nav>
+    <p>
+     You&rsquo;ve got the tools, the prompts, and the experience. Now let&rsquo;s turn that into a real Fix Kit &mdash; something you can open up whenever a game runs like trash, your frames tank, or your system just isn&rsquo;t feeling right.
+    </p>
+    <h2>
+     What Goes in Your Fix Kit?
+    </h2>
+    <ul>
+     <li>
+      <strong>
+       Prompt Packs:
+      </strong>
+      Bundles for diagnosing issues, optimizing settings, and cleaning up bloat
+     </li>
+     <li>
+      <strong>
+       Favorite Tools:
+      </strong>
+      HWiNFO, MSI Afterburner, DDU, Revo, LatencyMon, etc.
+     </li>
+     <li>
+      <strong>
+       Scripts:
+      </strong>
+      Batch or PowerShell tools you use regularly (ChatGPT can help generate them)
+     </li>
+     <li>
+      <strong>
+       Prompt Templates:
+      </strong>
+      Custom ones you&rsquo;ve refined through use
+     </li>
+    </ul>
+    <h2>
+     Prompt: Help Me Organize My Fix Kit
+    </h2>
+    <div class="relative bg-gray-800 text-white p-4 rounded-md font-mono text-sm overflow-auto mt-2">
+     <code class="block whitespace-pre-wrap break-words" id="prompt_9_1">
+      Help me organize a personal Fix Kit folder on my PC with subfolders for:
 - Tools
 - Prompt Packs
 - Batch Scripts
 - System Snapshots
 Include naming tips and ideas for maintaining it long-term.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Generate a Printable Version</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt2')">Copy</button><code id="prompt2">
-Take my system specs and most-used prompts and format them into a printable cheat sheet PDF.
-Add room for writing notes and tracking system changes.
-        </code></pre>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Prompt: Build a Shared Version</h2>
-        <pre class="bg-gray-800 p-4 rounded-md overflow-x-auto mb-4"><button class="copy-btn" onclick="copyCode('prompt3')">Copy</button><code id="prompt3">
-Help me turn my Fix Kit into a shareable GitHub repo or ZIP pack.
-Include a readme that explains how to use it for other gamers.
-        </code></pre>
-
-        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
-            <strong>Pro Tip:</strong> A Fix Kit isn’t just for solving problems — it’s for preventing them. Keep it updated, organized, and ready to deploy anytime.
-        </div>
-
-        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section10.html">Next: Guide Wrap-Up & Bonus Content →</a></p>
+     </code>
+     <button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded hover:bg-blue-700" onclick="copyPrompt('prompt_9_1')">
+      Copy
+     </button>
     </div>
+    <h2>
+     Prompt: Generate a Printable Version
+    </h2>
+    <div class="relative bg-gray-800 text-white p-4 rounded-md font-mono text-sm overflow-auto mt-2">
+     <code class="block whitespace-pre-wrap break-words" id="prompt_9_2">
+      Take my system specs and most-used prompts and format them into a printable cheat sheet PDF.
+Add room for writing notes and tracking system changes.
+     </code>
+     <button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded hover:bg-blue-700" onclick="copyPrompt('prompt_9_2')">
+      Copy
+     </button>
+    </div>
+    <h2>
+     Prompt: Build a Shared Version
+    </h2>
+    <div class="relative bg-gray-800 text-white p-4 rounded-md font-mono text-sm overflow-auto mt-2">
+     <code class="block whitespace-pre-wrap break-words" id="prompt_9_3">
+      Help me turn my Fix Kit into a shareable GitHub repo or ZIP pack.
+Include a readme that explains how to use it for other gamers.
+     </code>
+     <button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded hover:bg-blue-700" onclick="copyPrompt('prompt_9_3')">
+      Copy
+     </button>
+    </div>
+    <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
+     <strong>
+      Pro Tip:
+     </strong>
+     A Fix Kit isn&rsquo;t just for solving problems &mdash; it&rsquo;s for preventing them. Keep it updated, organized, and ready to deploy anytime.
+    </div>
+    <p>
+     <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section10.html">
+      Next: Guide Wrap-Up &amp; Bonus Content &rarr;
+     </a>
+    </p>
+   </main>
+  </div>
+  <!-- Footer -->
+  <div class="bg-gray-900 text-whitee">
+   <footer class="text-sm text-gray-500 text-center py-6 border-t border-gray-700 print:hidden">
+    <p>
+     &copy; 2025 ChatFixedIt. All rights reserved.
+    </p>
+    <p>
+     <a class="underline hover:text-whitee" href="https://github.com/johnbuttram/ai-enhanced-guide">
+      View on GitHub
+     </a>
+    </p>
+    <p>
+     <a class="underline hover:text-whitee" href="#">
+      Visit my Etsy Shop
+     </a>
+     |
+     <a class="underline hover:text-whitee" href="mailto:your@email.com">
+      Contact Me
+     </a>
+    </p>
+    <!-- This needs to be updated and finalized! Delete this comment after replacing. -->
+   </footer>
+  </div>
+  <!-- JS Sidebar Toggle -->
+  <script>
+   const toggleBtn = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('mobile-sidebar');
+  const overlay = document.getElementById('mobile-overlay');
 
-    
-    <script src="js/clipboard.js"></script>
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
 
-    </main>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+  </script>
+  <script defer="defer" src="/assets/js/site.js">
+  </script>
+ </body>
 </html>

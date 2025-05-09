@@ -1,106 +1,276 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Section 1 - Know Thy Rig</title>
-    
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Section 1 - Getting Started
+  </title>
+  <meta content="Learn how to prep ChatGPT with your exact PC specs so it can deliver personalized optimization advice." name="description"/>
+  <meta content="Section 1 - Getting Started" property="og:title"/>
+  <meta content="Learn how to prep ChatGPT with your exact PC specs so it can deliver personalized optimization advice." property="og:description"/>
+  <meta content="/assets/img/og_section1.jpg" property="og:image"/>
+  <!-- This og:image path needs to be updated and finalized! -->
+  <meta content="Section 1 - Getting Started" name="twitter:title"/>
+  <meta content="Learn how to prep ChatGPT with your exact PC specs so it can deliver personalized optimization advice." name="twitter:description"/>
+  <meta content="/assets/img/og_section1.jpg" name="twitter:image"/>
+  <script defer="defer" src="/assets/js/site.js">
+  </script>
+ </head>
+ <body class="bg-gray-900 text-whitee">
+  <a class="sr-only focus:not-sr-only absolute top-0 left-0 bg-cyan-500 text-black p-2 z-50" href="#main">
+   Skip to main content
+  </a>
+  <!-- Mobile Nav Button -->
+  <button class="md:hidden fixed top-2 left-2 z-30 bg-cyan-400 text-black font-bold px-4 py-1 rounded print:hidden" id="menu-toggle">
+   Menu
+  </button>
+  <!-- Mobile Overlay -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden print:hidden" id="mobile-overlay">
+  </div>
+  <!-- Mobile Sidebar -->
+  <div class="fixed top-0 left-0 w-64 h-full bg-gray-800 p-4 z-50 transform -translate-x-full transition-transform duration-300 md:hidden print:hidden text-white" id="mobile-sidebar">
+   <h2 class="text-xl font-bold mb-4 text-cyan-400">
+    ChatFixedIt
+   </h2>
+   <nav class="flex flex-col gap-y-2">
+    <a class="hover:text-cyan-400" href="../index.html">
+     🏠 Home
+    </a>
+    <a aria-current="page" class="hover:text-cyan-400" href="pages/section1.html">
+     Section 2: HWiNFO &amp; Prompt Crafting
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section3.html">
+     Section 3: Diagnosing Stuttering
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section4.html">
+     Section 4: Driver Management
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section5.html">
+     Section 5: Power Plans &amp; Registry
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section6.html">
+     Section 6: BIOS &amp; Hardware Settings
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section7.html">
+     Section 7: Deep System Tweaks
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section8.html">
+     Section 8: Companion Toolkit
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section9.html">
+     Section 9: Optimization Checklist
+    </a>
+    <a class="hover:text-cyan-400" href="pages/section10.html">
+     Section 10: Final Steps &amp; Recap
+    </a>
+    <a class="hover:text-cyan-400" href="landing.html">
+     Bonus Landing Page
+    </a>
+   </nav>
+   <button aria-label="Toggle light or dark mode" class="mt-4 px-4 py-2 text-sm font-semibold border border-white rounded hover:bg-white hover:text-black transition w-full" id="theme-toggle">
+    Toggle Theme
+   </button>
+  </div>
+  <!-- Layout Wrapper -->
+  <div class="flex flex-row min-h-screen bg-gray-900 text-whitee">
+   <!-- Desktop Sidebar -->
+   <aside aria-label="Main Sidebar Navigation" class="hidden md:flex w-64 h-full bg-gray-800 p-4 flex-col print:hidden text-white" role="navigation">
+    <h2 class="text-xl font-bold mb-4 text-cyan-400">
+     ChatFixedIt
+    </h2>
+    <nav class="flex flex-col gap-y-2">
+     <a class="hover:text-cyan-400" href="../index.html">
+      🏠 Home
+     </a>
+     <a aria-current="page" class="hover:text-cyan-400" href="pages/section1.html">
+      Section 2: HWiNFO &amp; Prompt Crafting
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section3.html">
+      Section 3: Diagnosing Stuttering
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section4.html">
+      Section 4: Driver Management
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section5.html">
+      Section 5: Power Plans &amp; Registry
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section6.html">
+      Section 6: BIOS &amp; Hardware Settings
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section7.html">
+      Section 7: Deep System Tweaks
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section8.html">
+      Section 8: Companion Toolkit
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section9.html">
+      Section 9: Optimization Checklist
+     </a>
+     <a class="hover:text-cyan-400" href="pages/section10.html">
+      Section 10: Final Steps &amp; Recap
+     </a>
+     <a class="hover:text-cyan-400" href="landing.html">
+      Bonus Landing Page
+     </a>
+    </nav>
+    <button aria-label="Toggle light or dark mode" class="mt-auto px-4 py-2 text-sm font-semibold border border-white rounded hover:bg-white hover:text-black transition" id="theme-toggle">
+     Toggle Theme
+    </button>
+   </aside>
+   <!-- Main Content -->
+   <main class="flex-1 p-6 max-w-6xl mx-auto space-y-6 md:pt-6 text-white pt-20" id="main">
+    <nav class="text-sm text-gray-400 mb-2 print:hidden">
+     Section 1: Getting Started
+    </nav>
+    <h1 class="text-3xl font-bold text-cyan-400 mb-4">
+     Know Thy Rig: Prepping ChatGPT with Your PC Specs
+    </h1>
+    <p class="mb-4 leading-relaxed">
+     If you want ChatGPT to help you optimize your gaming PC, you&rsquo;ve gotta speak its language &mdash; and that starts with knowing what&rsquo;s under the hood.
+    </p>
+    <p class="mb-4 leading-relaxed">
+     You don&rsquo;t need to memorize hardware jargon or recite your GPU&rsquo;s VRAM like a mantra. You just need a basic snapshot of your setup. Once ChatGPT has that info, it can give you targeted, relevant advice &mdash; not just generic tips.
+    </p>
+    <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
+     Why This Matters
+    </h2>
+    <ul class="list-disc pl-6 space-y-2">
+     <li>
+      Some fixes only apply to AMD or NVIDIA cards &mdash; ChatGPT needs to know what you're rocking.
+     </li>
+     <li>
+      Older CPUs may bottleneck your GPU &mdash; ChatGPT can help spot that.
+     </li>
+     <li>
+      RAM, SSD, and even your monitor refresh rate play a role in game performance.
+     </li>
+    </ul>
+    <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
+     What You'll Learn in This Section
+    </h2>
+    <ul class="list-disc pl-6 space-y-2">
+     <li>
+      How to quickly get a summary of your PC specs
+     </li>
+     <li>
+      How to feed that info to ChatGPT in a way it understands
+     </li>
+     <li>
+      How to save this as a reusable prompt for future help
+     </li>
+    </ul>
+    <p class="text-sm italic text-gray-400">
+     Pro Tip: Save your system summary as a prompt snippet so you can re-use it anytime.
+    </p>
+    <div class="relative bg-gray-800 rounded-lg p-4 overflow-auto print:prose">
+     <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+      <div class="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mt-2">
+       <div class="relative bg-gray-800 text-white p-4 rounded-md font-mono text-sm overflow-auto mt-2">
+        <code class="block whitespace-pre-wrap break-words" id="prompt_1_1">
+         You are an expert PC optimization wizard. I&rsquo;ll give you my system specs, and I want you to analyze them for performance bottlenecks and give me specific, actionable advice to improve gaming performance.
 
-<body class="flex min-h-screen bg-gray-900 text-white">
+My System Specs:
+- CPU: [Insert CPU Name]
+- GPU: [Insert GPU Name]
+- RAM: [Insert Size &amp; Speed]
+- Storage: [Insert SSD/HDD info]
+- OS: [Insert Windows Version]
+- Display: [Resolution &amp; Refresh Rate]
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-4 hidden md:block fixed h-full">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
-
-    <!-- Mobile Nav Button -->
-    <div class="md:hidden fixed top-4 left-4 z-50">
-        <button onclick="toggleSidebar()" class="bg-cyan-400 text-black font-bold px-4 py-2 rounded">
-            Menu
+What are 3 things I can do to boost performance?
+        </code>
+        <button class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded hover:bg-blue-700" onclick="copyPrompt('prompt_1_1')">
+         Copy
         </button>
+       </div>
+      </div>
+     </div>
     </div>
+    <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
+     New to ChatGPT? Here&rsquo;s a Crash Course
+    </h2>
+    <p class="mb-4 leading-relaxed">
+     You don&rsquo;t need to be a prompt wizard to get great results &mdash; but you do need to treat ChatGPT like a teammate, not a search engine. Here&rsquo;s how to get started:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+     <li>
+      <strong>
+       Be specific:
+      </strong>
+      Instead of &ldquo;fix my game,&rdquo; say &ldquo;My GPU is an RTX 3060 and I&rsquo;m getting FPS drops in Elden Ring. What could be causing it?&rdquo;
+     </li>
+     <li>
+      <strong>
+       Give context:
+      </strong>
+      Share your specs, OS version, and even what you&rsquo;ve already tried.
+     </li>
+     <li>
+      <strong>
+       Use follow-ups:
+      </strong>
+      ChatGPT remembers context in the same conversation, so build on it. Ask &ldquo;What&rsquo;s next?&rdquo; or &ldquo;How do I do that step?&rdquo;
+     </li>
+     <li>
+      <strong>
+       Use bullet-style prompts:
+      </strong>
+      ChatGPT handles lists well. Try: &ldquo;Here&rsquo;s my system info. Give me 3 performance tips tailored to this.&rdquo;
+     </li>
+    </ul>
+    <p class="text-sm italic text-gray-400">
+     Pro Tip: Save your favorite prompts in a Notepad file or text doc so you can reuse them later.
+    </p>
+    <p class="mt-6">
+     <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html">
+      Next up: Grab your specs with HWiNFO &rarr;
+     </a>
+    </p>
+   </main>
+  </div>
+  <!-- Footer -->
+  <div class="bg-gray-900 text-whitee">
+   <footer class="text-sm text-gray-500 text-center py-6 border-t border-gray-700 print:hidden">
+    <p>
+     &copy; 2025 ChatFixedIt. All rights reserved.
+    </p>
+    <p>
+     <a class="underline hover:text-whitee" href="https://github.com/johnbuttram/ai-enhanced-guide">
+      View on GitHub
+     </a>
+    </p>
+    <p>
+     <a class="underline hover:text-whitee" href="#">
+      Visit my Etsy Shop
+     </a>
+     |
+     <a class="underline hover:text-whitee" href="mailto:your@email.com">
+      Contact Me
+     </a>
+    </p>
+    <!-- This needs to be updated and finalized! Delete this comment after replacing. -->
+   </footer>
+  </div>
+  <!-- JS Sidebar Toggle -->
+  <script>
+   const toggleBtn = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('mobile-sidebar');
+  const overlay = document.getElementById('mobile-overlay');
 
-    <!-- Sidebar for Mobile -->
-    <aside id="mobileSidebar" class="fixed top-0 left-0 w-64 bg-gray-800 p-4 h-full z-40 hidden md:hidden">
-        <h2 class="text-xl font-bold mb-4 text-cyan-400">ChatFixedIt</h2>
-        <nav class="flex flex-col gap-2">
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section1.html" class="hover:text-cyan-400">Section 1: Getting Started</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section2.html" class="hover:text-cyan-400">Section 2: HWiNFO & Prompts</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section3.html" class="hover:text-cyan-400">Section 3: Stutter Diagnosis</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section4.html" class="hover:text-cyan-400">Section 4</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section5.html" class="hover:text-cyan-400">Section 5</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section6.html" class="hover:text-cyan-400">Section 6</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section8.html" class="hover:text-cyan-400">Section 8</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/section9.html" class="hover:text-cyan-400">Section 9</a>
-            <a class="text-cyan-400 underline hover:text-cyan-300" href="pages/landing.html" class="hover:text-cyan-400">Landing Page</a>
-        </nav>
-    </aside>
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
 
-    <!-- Main content wrapper -->
-    <main class="flex-1 ml-0 md:ml-64 p-6 w-full">
-
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-cyan-400 mb-4">Know Thy Rig: Prepping ChatGPT with Your PC Specs</h1>
-
-        <p class="mb-4 leading-relaxed">If you want ChatGPT to help you optimize your gaming PC, you’ve gotta speak its language — and that starts with knowing what’s under the hood.</p>
-
-        <p class="mb-4 leading-relaxed">You don’t need to memorize hardware jargon or recite your GPU’s VRAM like a mantra. You just need a basic snapshot of your setup. Once ChatGPT has that info, it can give you <strong>targeted, relevant advice</strong> — not just generic tips.</p>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">Why This Matters</h2>
-        <ul class="list-disc pl-6 space-y-2">
-            <li class="mb-2">Some fixes only apply to AMD or NVIDIA cards — ChatGPT needs to know what you're rocking.</li>
-            <li class="mb-2">Older CPUs may bottleneck your GPU — ChatGPT can help spot that.</li>
-            <li class="mb-2">RAM, SSD, and even your monitor refresh rate play a role in game performance.</li>
-        </ul>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">What You'll Learn in This Section:</h2>
-        <ul class="list-disc pl-6 space-y-2">
-            <li class="mb-2">How to quickly get a summary of your PC specs</li>
-            <li class="mb-2">How to feed that info to ChatGPT in a way it understands</li>
-            <li class="mb-2">How to save this as a reusable prompt for future help</li>
-        </ul>
-
-        <div class="bg-gray-800 border-l-4 border-cyan-400 p-4 my-4">
-            <strong>Pro Tip:</strong> Save your system summary as a prompt snippet so you can re-use it anytime.
-        </div>
-
-        <h2 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2">New to ChatGPT? Here’s a Crash Course</h2>
-
-        <p class="mb-4 leading-relaxed">You don’t need to be a prompt wizard to get great results — but you do need to treat ChatGPT like a teammate, not a search engine. Here’s how to get started:</p>
-
-        <ul class="list-disc pl-6 space-y-2">
-            <li class="mb-2"><strong>Be specific:</strong> Instead of “fix my game,” say “My GPU is an RTX 3060 and I’m getting FPS drops in Elden Ring. What could be causing it?”</li>
-            <li class="mb-2"><strong>Give context:</strong> Share your specs, OS version, and even what you’ve already tried.</li>
-            <li class="mb-2"><strong>Use follow-ups:</strong> ChatGPT remembers context in the same conversation, so build on it. Ask “What’s next?” or “How do I do that step?”</li>
-            <li class="mb-2"><strong>Use bullet-style prompts:</strong> ChatGPT handles lists well. Try: “Here’s my system info. Give me 3 performance tips tailored to this.”</li>
-        </ul>
-
-        <p class="mb-4 leading-relaxed"><strong>Pro Tip:</strong> Save your favorite prompts in a Notepad file or text doc so you can reuse them later.</p>
-
-        <p class="mb-4 leading-relaxed"><a class="text-cyan-400 underline hover:text-cyan-300" href="section2.html">Next up: Grab your specs with HWiNFO →</a></p>
-    </div>
-    <script src="js/clipboard.js"></script>
-
-    </main>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+  </script>
+  <script defer="defer" src="/assets/js/site.js">
+  </script>
+ </body>
 </html>
